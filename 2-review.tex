@@ -1,0 +1,84 @@
+This chapter describes the basic knowledge of Statistical Language Modeling together with the prominent approaches. The research context is 
+drawn in order to show the necessity of the neural network-based approaches. 
+
+\section{Overview}
+In general, language models aim at measuring the fluency of any text, showing how much it makes sense. Artificial systems that generate text, therefore, requires
+the aid of language models in order to produce textual outputs that are comprehensible. 
+
+From the statistical point of view, a word string is considered as a stochastic process, thus the language model is formulated as the probability estimation over all 
+possible sequences of words. The sequence length can be arbitrary, while the words are taken from a limited vocabulary. For example, the likeliness of "the end of our world" is much higher than "tea end of our word", because the latter string is much less likely to be found in available English text. 
+
+Since direction estimation for that probability distribution is intractable, the probability of a sentence $P(w_1^L)$ is factorised using the chain rule:
+\begin{equation}
+\label{eq:lm1}
+P(w_1^L) = P(w_1 | \text{\textless s\textgreater}) \prod_{i=2}^L P(w_i | \text{\textless s\textgreater} w_1^{i-1})\\
+		 = \prod_{i=l}^L P(w_l | h_l)
+\end{equation}
+in which, \text{\textless s\textgreater} is used to denote beginning token of the sentence/string. The history $h_i$ represents the string before the current word $w_i$. Instead of directly modeling the original distribution, the statistical models estimate the constituent probabilities, which usually results in browsing or storing the statistics of millions of
+possible word strings since each language may consist of several thousands to millions of words. 
+
+%~ Application of language models
+In terms of application, language models are often placed 
+
+
+\section{Evaluation Metrics}
+
+Quality measurement of language models is often carried out using two different ways. First, statistical language models can be evaluated by the capability to predict a new corpus. The perplexity (PPL) of a word sequence~\textbf{$w_1^L$} is computed as follows.
+\begin{equation}
+\label{eq:ppl}
+PPL = \exp(\frac{\sum_{l=1}^L{-\ln P(w_i|h_i)}}{L}  )
+\end{equation}
+It is notable that the exponential term is the average of the negative log-likelihood of every word in the data, while $\log_2 \text{PPL}$ is the \textbf{Entropy} of the model. A low perplexity value corresponds to the fact that the language model is able to fits better the data, since the distribution of the model is closer to the unknown distribution of the test data. 
+
+Second, the quality of language models can also be evaluated through their impacts on other applications such as Automatic Speech Recognition (ASR) or Statistical Machine Translation (SMT), by reducing the errors in the output of such systems. Specifically, in ASR, the metric used to evaluate the contribution of language models is Word Error Rate (WER) which is the distance between the decoder hypothesis and the reference. Similarly in SMT, the effect of language models can be reflected by the BLEU score~\cite{papineni2002bleu} or even human judgement. 
+
+The main advantage of perplexity is that it is fast to perform and independent to other complex systems. The crediablilty of perplexity, however, depends on the validation/test data as well as the underlying vocabulary. It is also unusable for models that provide unnormalised distributions (sum of the distributions does not equal to $1$). More importantly, an improvement in terms of perplexity does not always result in the application improvement. For example, the improvement is required to be at least $10\%$ to be noteworthy for an ASR system~\cite{Rosenfeld:2000}
+%~ The main disadvantage of this evaluation method is that full ASR or SMT systems are required for comparison, while perplexity can be quickly produced. Therefore, in the scope of the thesis, we use perplexity as the main evaluation metrics. 
+
+
+
+\section{Prominent approaches in Language Models}
+
+\subsection{$N$-gram statistical language models}
+The statistical methods are revised from equation~\ref{eq:lm1}, in which the probability of a sentence is factored into constituent conditioned probabilities. There are many approaches proposed to estimate those probabilities, however most of them revolve around \textbf{maximum likelihood} (MLE) of the training data together with \textbf{smoothing techniques} that help the models generalise better on unseen data. Such estimation is often done by collecting the word co-occurence frequencies, with the important Markovian assumption that the history $h_i$ is limited to only $n - 1$ words (thus called $n$-gram models):
+\begin{equation}
+\label{eq:markov}
+P(w_i|h_i) \approx P(w_i|w_{i-n+1}^{i-1})
+\end{equation}
+In order to estimate each conditional probability by MLE, we simply count the number of occurence of the $n$-grams and the history:
+\begin{equation}
+\label{eq:ngramMLE}
+ P_{MLE}(w_i|w_{i-n+1}^{i-1}) = \frac {C(w_1^n)} {C(w_1^{n-1})}
+\end{equation}
+where $C(X)$ is the number of times that the string $X$ appears in the training data.
+
+Problem arises when we need to estimate the probability distribution of rare word strings or even $n$-grams that do not occur in the corpus. According to Zipf law~\cite{kingsley1932selective}, the frequency distribution of a word is reversely proportional to its rank in the frequency table. The $n$-gram models, consequently, underestimate or even give
+null probabilities for unseen $n$-grams which actually make sense in natural language. As a result, smoothing techniques are employed in order to alleviate estimation of rare and unseen $n$-grams. In this section, we describe the most successful method which has been considered the standard in $n$-gram language models: the interpolated Knesey-Ney smoothing technique~\cite{kneser1995improved}. 
+
+%~ \subsection{Back-off techniques}
+
+\subsection{Interpolated Knesey-Ney smoothing}
+
+
+\subsection{Structured language models}
+Originally, statistical language models were not warmly welcomed by the linguistic community, as can be seen from the 
+statement of Chomsky: the notion of probability of a sentence is completely useless one. Essentially, $n$-gram models, which will be described in subsequent sections, 
+and their finite state machine variations are not able to represent linguistic patterns and long term dependency between words in a sentence, or in a broad context. 
+
+Structured language models involve using~\textbf{Context free grammars} to generate a syntax tree for the word string, in which the leaves represent the words and the 
+other nodes are non-terminal symbols. The generation process is statistically learned from a training corpus, so that the final score of the sentence is decided from the probabilistic
+derivations of the grammar. 
+
+Despite the fact that structured language models are much more linguistically related than the statistical counterpart, they were not able to prove their practicality. The approach itself seems to be questionable when applied to speech content where the speakers do not strictly follow grammatical rules. Moreover, grammar construction often requires the participation of expert linguists and native speakers of the language, thus the method is expensive when applied to other languages. 
+
+
+
+\subsection{Class based language models}
+
+\subsection{Maximum Entropy Language models}
+
+\section{Neural Network Language Models}
+
+\subsection{Feed-forward variations}
+
+\subsection{Recurrent Neural Network variations}

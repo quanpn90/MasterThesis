@@ -1,0 +1,111 @@
+\documentclass[12pt]{report}
+\usepackage{suthesis}
+%\documentstyle[12pt,suthesis]{report}
+
+% -- Imports --
+% (general libraries)
+\usepackage{times,latexsym,amsfonts,amssymb,amsmath,graphicx,url,bbm,rotating}
+\usepackage{enumitem,multirow,hhline,stmaryrd,bussproofs,mathtools,siunitx,arydshln}
+\usepackage{booktabs,xcolor,csquotes}
+%\usepackage{dirtytalk}
+% (custom libraries)
+\usepackage{fitch}
+% (inline references)
+\usepackage[square,sort,comma,numbers]{natbib}
+% (tikz)
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows,chains,positioning,automata,trees,calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings}
+% (tikz dependency tree)
+\usepackage{tikz-dependency,pifont}
+% (print algorithms)
+\usepackage[ruled,lined,linesnumbered]{algorithm2e}
+% (custom)
+\input std-macros.tex
+\input macros.tex	
+% (paper compilation hacks)
+\def\newcite#1{\citet{#1}}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+
+% Thang
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\small}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\newcommand{\error}[1]{{\color{red} #1}}
+\newcommand{\ngram}{$n$-gram}
+\newcommand{\word}[1]{``#1''}
+
+% -- Document --
+\begin{document}
+
+% Title
+\title{Convolutional Neural Network Language Models}
+\author{Ngoc-Quan Pham}
+\principaladviser{Marco Baroni}
+\firstreader{Gemma Boleda}
+\secondreader{German Kruzhevsky}
+%~ \thirdreader{Quoc V. Le}
+
+% Preface
+\beforepreface
+%\input preface.tex
+%\input ack.tex
+\afterpreface
+
+
+% -- Sections --
+\chapter{Introduction}
+\label{c:intro}
+\input{1-intro.tex}
+
+\chapter{Literature Review}
+\label{c:review}
+\input{2-review.tex}
+
+\chapter{Neural Network Language Models}
+\label{c:nnlm}
+
+\chapter{Convolutional Neural Network}
+\label{c:cnn}
+
+\chapter{Experiments}
+\label{c:exp}
+
+\chapter{Inside the Convolutional layer}
+\label{c:analysis}
+
+\chapter{Conclusion}
+\label{c:conc}
+%~ \chapter{
+%~ \chapter{Background}
+%~ \label{c:background}
+%~ \input{2-background.tex}
+
+%~ \chapter{``Copy'' Mechanisms}
+%~ \label{c:copy}
+
+%~ \chapter{Attention Mechanisms}
+%~ \label{c:attention}
+%~ \input{4-attention.tex}
+
+%~ \chapter{Hybrid Neural Machine Translation}
+%~ \label{c:hybrid}
+%~ \input{5-hybrid.tex}
+
+%~ \chapter{Towards the Future of NMT}
+%~ \label{c:future}
+%~ \input{6-future.tex}
+
+%~ \chapter{Conclusion}
+%~ \label{c:conclude}
+%~ \input{7-conclude.tex}
+
+
+% -- Appendix --
+\appendix
+
+
+\bibliographystyle{plainnat}
+\bibliography{thesis}
+\end{document}

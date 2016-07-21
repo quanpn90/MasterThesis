@@ -1,0 +1,192 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bengio et~al.(2003)Bengio, Ducharme, Vincent, and Janvin]{Bengio2003}
+Y.~Bengio, R.~Ducharme, P.~Vincent, and C.~Janvin.
+\newblock A neural probabilistic language model.
+\newblock 3:\penalty0 1137--1155, 2003.
+
+\bibitem[Brown et~al.(1993)Brown, Pietra, Pietra, and Mercer]{Brown:1993:MSM}
+Peter~F. Brown, Vincent J.~Della Pietra, Stephen A.~Della Pietra, and Robert~L.
+  Mercer.
+\newblock The mathematics of statistical machine translation: Parameter
+  estimation.
+\newblock 19\penalty0 (2):\penalty0 263--311, 06 1993.
+
+\bibitem[Cer et~al.(2010)Cer, Galley, Jurafsky, and Manning]{cer10phrasal}
+D.~Cer, M.~Galley, D.~Jurafsky, and C.~D. Manning.
+\newblock Phrasal: A statistical machine translation toolkit for exploring new
+  model features.
+\newblock In \emph{ACL, Demonstration Session}, 2010.
+
+\bibitem[Chiang(2007)]{chiang07hiero}
+David Chiang.
+\newblock Hierarchical phrase-based translation.
+\newblock 33\penalty0 (2):\penalty0 201--228, 2007.
+
+\bibitem[Cho et~al.(2014)Cho, van Merrienboer, Gulcehre, Bougares, Schwenk, and
+  Bengio]{cho14}
+Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Fethi Bougares, Holger
+  Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using {RNN} encoder-decoder for
+  statistical machine translation.
+\newblock In \emph{EMNLP}, 2014.
+
+\bibitem[Devlin et~al.(2014)Devlin, Zbib, Huang, Lamar, Schwartz, and
+  Makhoul]{devlin14}
+J.~Devlin, R.~Zbib, Z.~Huang, T.~Lamar, R.~Schwartz, and J.~Makhoul.
+\newblock Fast and robust neural network joint models for statistical machine
+  translation.
+\newblock In \emph{ACL}, 2014.
+
+\bibitem[Dyer et~al.(2010)Dyer, Weese, Setiawan, Lopez, Ture, Eidelman,
+  Ganitkevitch, Blunsom, and Resnik]{dyer10cdec}
+Chris Dyer, Jonathan Weese, Hendra Setiawan, Adam Lopez, Ferhan Ture, Vladimir
+  Eidelman, Juri Ganitkevitch, Phil Blunsom, and Philip Resnik.
+\newblock cdec: A decoder, alignment, and learning framework for finite-state
+  and context-free translation models.
+\newblock In \emph{ACL, Demonstration Session}, 2010.
+
+\bibitem[Heafield(2011)]{kenlm}
+Kenneth Heafield.
+\newblock {KenLM:} faster and smaller language model queries.
+\newblock In \emph{WMT}, 2011.
+
+\bibitem[Hutchins(2007)]{hutchins07}
+W.~John Hutchins.
+\newblock Machine translation: A concise history, 2007.
+
+\bibitem[Jean et~al.(2015{\natexlab{a}})Jean, Cho, Memisevic, and
+  Bengio]{jean15}
+S\'{e}bastien Jean, Kyunghyun Cho, Roland Memisevic, and Yoshua Bengio.
+\newblock On using very large target vocabulary for neural machine translation.
+\newblock In \emph{ACL}, 2015{\natexlab{a}}.
+
+\bibitem[Jean et~al.(2015{\natexlab{b}})Jean, Firat, Cho, Memisevic, and
+  Bengio]{jean15wmt}
+S\'{e}bastien Jean, Orhan Firat, Kyunghyun Cho, Roland Memisevic, and Yoshua
+  Bengio.
+\newblock Montreal neural machine translation systems for {WMT}'15.
+\newblock In \emph{WMT}, 2015{\natexlab{b}}.
+
+\bibitem[Kalchbrenner and Blunsom(2013)]{kal13}
+Nal Kalchbrenner and Phil Blunsom.
+\newblock Recurrent continuous translation models.
+\newblock In \emph{EMNLP}, 2013.
+
+\bibitem[Kingsley(1932)]{kingsley1932selective}
+Zipf~George Kingsley.
+\newblock Selective studies and the principle of relative frequency in
+  language, 1932.
+
+\bibitem[Kneser and Ney(1995)]{kneser1995improved}
+Reinhard Kneser and Hermann Ney.
+\newblock Improved backing-off for m-gram language modeling.
+\newblock In \emph{Acoustics, Speech, and Signal Processing, 1995. ICASSP-95.,
+  1995 International Conference on}, volume~1, pages 181--184. IEEE, 1995.
+
+\bibitem[Koehn et~al.(2003)Koehn, Och, and Marcu]{Koehn:2003:SMT}
+Philipp Koehn, Franz~Josef Och, and Daniel Marcu.
+\newblock Statistical phrase-based translation.
+\newblock In \emph{NAACL}, 2003.
+
+\bibitem[Koehn et~al.(2007)Koehn, Hoang, Birch, Callison-Burch, Federico,
+  Bertoldi, Cowan, Shen, Moran, Zens, et~al.]{koehn2007moses}
+Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello
+  Federico, Nicola Bertoldi, Brooke Cowan, Wade Shen, Christine Moran, Richard
+  Zens, et~al.
+\newblock Moses: Open source toolkit for statistical machine translation.
+\newblock In \emph{Proceedings of the 45th annual meeting of the ACL on
+  interactive poster and demonstration sessions}, pages 177--180. Association
+  for Computational Linguistics, 2007.
+
+\bibitem[Liang et~al.(2006)Liang, Bouchard-C\^{o}t{\'e}, Klein, and
+  Taskar]{Liang:2006:EDA}
+Percy Liang, Alexandre Bouchard-C\^{o}t{\'e}, Dan Klein, and Ben Taskar.
+\newblock An end-to-end discriminative approach to machine translation.
+\newblock In \emph{ACL}, 2006.
+
+\bibitem[Luong and Manning(2016)]{luong16}
+Minh-Thang Luong and Christopher~D. Manning.
+\newblock Achieving open vocabulary neural machine translation with hybrid
+  word-character models.
+\newblock In \emph{ACL}, 2016.
+
+\bibitem[Luong et~al.(2015{\natexlab{a}})Luong, Kayser, and
+  Manning]{luong15nlm}
+Minh-Thang Luong, Michael Kayser, and Christopher~D. Manning.
+\newblock Deep neural language models for machine translation.
+\newblock In \emph{CoNLL}, 2015{\natexlab{a}}.
+
+\bibitem[Luong et~al.(2015{\natexlab{b}})Luong, Pham, and Manning]{luong15attn}
+Minh-Thang Luong, Hieu Pham, and Christopher~D. Manning.
+\newblock Effective approaches to attention-based neural machine translation.
+\newblock In \emph{EMNLP}, 2015{\natexlab{b}}.
+
+\bibitem[Luong et~al.(2015{\natexlab{c}})Luong, Sutskever, Le, Vinyals, and
+  Zaremba]{luong15}
+Minh-Thang Luong, Ilya Sutskever, Quoc~V. Le, Oriol Vinyals, and Wojciech
+  Zaremba.
+\newblock Addressing the rare word problem in neural machine translation.
+\newblock In \emph{ACL}, 2015{\natexlab{c}}.
+
+\bibitem[Och and Ney(2003)]{och03}
+Franz~Josef Och and Hermann Ney.
+\newblock A systematic comparison of various statistical alignment models.
+\newblock 29\penalty0 (1):\penalty0 19--51, 2003.
+
+\bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and
+  Zhu]{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
+\newblock Bleu: a method for automatic evaluation of machine translation.
+\newblock In \emph{Proceedings of the 40th annual meeting on association for
+  computational linguistics}, pages 311--318. Association for Computational
+  Linguistics, 2002.
+
+\bibitem[Rosenfeld(2000)]{Rosenfeld:2000}
+Ronald Rosenfeld.
+\newblock Two decades of statistical language modeling: Where do we go from
+  here.
+\newblock In \emph{Proceedings of the IEEE}, page 2000, 2000.
+
+\bibitem[Schwenk(2007)]{schwenk07}
+Holger Schwenk.
+\newblock Continuous space language models.
+\newblock \emph{Computer Speech and Languages}, 21\penalty0 (3):\penalty0
+  492--518, 2007.
+
+\bibitem[Schwenk(2012)]{Schwenk12continuous}
+Holger Schwenk.
+\newblock Continuous space translation models for phrase-based statistical
+  machine translation.
+\newblock In \emph{COLING}, 2012.
+
+\bibitem[Sennrich et~al.(2016)Sennrich, Haddow, and Birch]{sennrich16mono}
+Rico Sennrich, Barry Haddow, and Alexandra Birch.
+\newblock Improving neural machine translation models with monolingual data.
+\newblock In \emph{ACL}, 2016.
+
+\bibitem[Sutskever et~al.(2014)Sutskever, Vinyals, and Le]{sutskever14}
+Ilya Sutskever, Oriol Vinyals, and Quoc~V. Le.
+\newblock Sequence to sequence learning with neural networks.
+\newblock In \emph{NIPS}, 2014.
+
+\bibitem[Vaswani et~al.(2013)Vaswani, Zhao, Fossum, and
+  Chiang]{vaswani13decode}
+Ashish Vaswani, Yinggong Zhao, Victoria Fossum, and David Chiang.
+\newblock Decoding with large-scale neural language models improves
+  translation.
+\newblock In \emph{EMNLP}, 2013.
+
+\bibitem[Weaver(1949)]{weaver49}
+Warren Weaver.
+\newblock Translation.
+\newblock In William~N. Locke and A.~Donald Boothe, editors, \emph{Machine
+  Translation of Languages}, pages 15--23. MIT Press, Cambridge, MA, 1949.
+\newblock Reprinted from a memorandum written by Weaver in 1949.
+
+\end{thebibliography}

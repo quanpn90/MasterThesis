@@ -1,0 +1,11 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces {\bf Machine translation} (MT) -- a general setup of MT. Systems build translation models from parallel corpora to translate new unseen sentences, e.g., ``She loves cute cats''.}}{2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces {\bf Phrase-based machine translation} (MT) -- example of how phrase-based MT systems translate a source sentence ``She loves cute cats'' into a target sentence ``Elle aime les chats mignons'': sentences are split into chunks and phrases are translated. }}{2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces {\bf Source-conditioned neural language model} (NLM) -- example of a source-conditioned NLM proposed by \citet {devlin14}. To evaluate a how likely a next word ``rive'' is, the model not only relies on previous target words (context) ``promenade le long de la'' as in traditional NLMs \cite {Bengio2003}, but also utilizes source context ``along the South Bank'' to lower uncertainty in its prediction. }}{3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces {\bf Neural machine translation} -- example of a deep recurrent architecture proposed by \citet {sutskever14} for translating a source sentence ``I am a student'' into a target sentence ``Je suis \'{e}tudiant''. Here, ``\texttt {\_}'' marks the end of a sentence. }}{4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
