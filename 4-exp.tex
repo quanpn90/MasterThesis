@@ -1,0 +1,154 @@
+We evaluate our model on two English corpora of different sizes and
+genres that have been used for language modeling evaluation
+before. The {\bf Penn Treebank} contains one million words of
+newspaper text with 10K words in the vocabulary. We reuse the
+preprocessing and train/test/valid division
+from~\cite{mikolov2014learning}. 
+%\gbt{Changed Europarl to Europarl-NC because Europarl usually refers
+%to the multilingual Europarl corpus developed by I think Koehn ages
+%ago.}
+{\bf Europarl-NC} is a a 64-million word corpus that was developed for
+a Machine Translation shared task~\cite{bojar-EtAl:2015:WMT},
+combining Europarl data (from parliamentary debates in the European
+Union) and News Commentary data.  We preprocessed the corpus with
+tokenization and true-casing tools from the Moses
+toolkit~\cite{koehn2007moses}. The vocabulary is composed of words
+that occur at least 3 times in the training set and contains
+approximately 60K words. %We use the validation and test set
+% of the MT shared task.
+
+We train our models using Stochastic Gradient Descent (SGD) and we
+reduce the learning rate by a fixed proportion every time the
+validation perplexity increases after one epoch. The values for learning rate,
+learning rate shrinking 
+%\gbt{isn't it ``learning rate decay''?}
+and mini-batch sizes as well as context size are
+fixed once and for all based on insights drawn from previous
+work~\cite{le2011structured,sukhbaatar2015end,devlin2014fast} and
+through experimentation with the Penn Treebank validation set. Experimentally we found SGD to be efficient and adequately fast, while other learning algorithms involve additional hyper parameters (such as alpha in RMSprop~\cite{tieleman2012lecture})
+
+%For parameter tuning, we are concerned with trying the parameters which are less
+%data-dependent including learning rate, learning rate shrink and mini-batch size on the small
+%corpus (Penntreebank) and then recycle them on experiments with larger corpora. 
+%The choice 
+%of parameters also refers to previous works in feed-forward networks~\cite{le2011structured,sukhbaatar2015end,devlin2014fast}.
+Specifically, the learning rate is set to $0.05$, with mini-batch size
+of 128 (we do not take the average of loss over the batch, and the
+training set is shuffled). We multiply the learning rate by $0.5$
+every time we shrink it and clip the gradients if their norm is larger
+than $12$. The network parameters are initialized randomly on a range
+from $-0.01$ to $0.01$ and the context size is set to $16$. In
+Section~\ref{sect:ana} we show that this large context window is fully
+exploited. 
+%The property of neural networks allow us to use such large context. We
+%also aim at finding if the network can take into account the context words from afar. 
+
+For the base FFNN and CNN we study embedding sizes (and thus, number of kernels) $k=128,256$. For $k=128$ we explore the simple CNN, incrementally adding NIN and COM variations (in that order) and, alternatively, using a ML-CNN. For $k=256$, we only explore the former three alternatives. For the kernel size, we set it to $w=3$ words for the simple CNN (out of options $3,5,7,9$), whereas for the COM variant we use $w=3$ and $5$. However, we observed the models to be generally robust to this parameter. Dropout rates are tuned specifically for each combination of model and dataset based on the validation perplexity. We also add small dropout ($0.05-0.15$) when we train the networks on the small corpus (Penn Treebank). 
+
+% Data-dependent parameters are word embedding $k$ (the size of hidden layers is scaled by $k$),
+%and dropout. For each corpus, we started with a low embedding size then increased it exponentially.
+%The dropout value is tuned on the validation data. We report the test perplexity (lower is better) after getting the best
+%dropout value for the embedding size. The size of the network is also restricted by our computational resource.
+
+The experimental results for recurrent neural network language models,
+such as Recurrent Neural Networks (RNN) and Long-Short Term Memory (LSTM), on the Penn Treebank are quoted from previous
+work; for Europarl-NC, we train our own models (we also report the
+performance of these in-house trained RNN and LSTM models on the Penn Treebank for
+reference). Specifically, we train LSTMs with embedding size $k=256$
+and number of layers $L=2$ as well as $k=512$ with $L=1,2$. We train
+one RNN with $k=512$ and $L=2$. To train these models, we use the
+published source code from~\cite{zaremba2014recurrent}. Our own models are also
+implemented in Torch7\footnote{We'll link the source code here if the paper is accepted} %available at https://github.com/quanpn90/convlm.} 
+	for easier comparison.
+
+ For all models trained on Europarl-NC, we used hierarchical softmax to
+speed up training, clustering the words in the vocabulary into 245
+classes based on word frequency.
+
+%~ \gbt{What vocabulary size?};
+%~ {\bf Text8}, comprising the first 17 million words from a Wikipedia
+%~ dump with about $44$K words in the vocabulary (also used
+%~ in~\newcite{mikolov2014learning}); and a 64-million word corpus ({\bf
+  %~ Europarl-NC}) combining \gbt{pls check} Europarl data (from
+%~ parliamentary debates in the European Union) and News Commentary
+%~ monolingual data \gbt{what kind of genre is that?} that was developed
+%~ for a Machine Translation shared task~\cite{bojar-EtAl:2015:WMT}.
+
+%~ For the first two corpora, we reuse the preprocessing steps
+%~ in~\cite{mikolov2014learning}. For Europarl-NC, after preprocessing the
+%~ corpus with tokenization and true-casing with tools provided in the
+%~ Moses toolkit~\cite{koehn2007moses}, we selected the words that appear
+%~ at least 3 times in the training set to obtain a vocabulary of
+%~ approximately $60K$ words.
+
+%~ To implement our models, we
+%~ used Torch 7~\cite{collobert2011torch7} because of its fast CNN
+%~ modules. We also used the implementation of LSTM/RNN language models
+%~ in~\cite{zaremba2014recurrent} for the comparative experiments.
+
+%~ As mentioned above, we fix the number of kernels in each convolutional
+%~ layer to be equal to the embedding dimensionality $k$. Furthermore,
+%~ the size of the first hidden layer --after the projection in the FFLM
+%~ or after the convolutional layer in the CNN-- is also kept at
+%~ $2 \times k$. We did not tune this parameter, but rather report
+%~ results for different choices of $k$.
+
+ %For example, \`baseline-128\' refers to the feed-forward model with embedding size of $128$ and hidden layer size of $256$. The upgraded CNN model has one more convolutional layer with $256$ feature maps. The second improvement comes from the Network-in-Network (``+Nin'') structure applied to the convolutional kernel. 
+ %The kernel window size and padding parameters are adjusted so that the convolutional outputs have the same size as the embedding inputs, after simple reshaping.
+
+%~ As mentioned above, we fix the number of kernels in each convolutional
+%~ layer to be equal to the embedding dimensionality $k$. Furthermore,
+%~ the size of the first hidden layer --after the projection in the FFLM
+%~ or after the convolutional layer in the CNN-- is also kept at
+%~ $2 \times k$. We did not tune this parameter, but rather report
+%~ results for different choices of $k$.
+%For example, \`baseline-128\' refers to the feed-forward model with embedding size of $128$ and hidden layer size of $256$. The upgraded CNN model has one more convolutional layer with $256$ feature maps. The second improvement comes from the Network-in-Network (``+Nin'') structure applied to the convolutional kernel. 
+%The kernel window size and padding parameters are adjusted so that the convolutional outputs have the same size as the embedding inputs, after simple reshaping. 
+%~ {\bf FIXME: In section 3.2 explain that the window is centered on the the input $i$ and padding vectors are added before and after the full context}
+%~ Other parameters we explore are window size (${3, 5, 7}$), dropout
+%~ probability values (from $0.1$ to $0.5$ \gbt{check} in steps of $0.1$), and the number of
+%~ convolutional layers (${1. 2}$) \gbt{I don't understand
+  %~ ${1. 2}$}. \gbt{check following} The weights of the network are
+%~ randomly initialised from a uniform distribution of values between
+%~ $-0.01$ and $0.01$ based on other works in
+%~ FFLM~\cite{schwenk2007continuous}. For the convolutional weights, we
+%~ found that the presence of Batch Normalisation reduces the effect of
+%~ the initialisation method. We do not observe any difference between
+%~ using the initialization just described (randomly drawn from a uniform
+%~ distribution $-0.01 - 0.01$) and the MSR initialization
+%~ method~\cite{he2015delving}.
+
+%~ \gbt{Quan, has the move requested in the commented-out text below been done? but I think that the
+%~ ReLU information does belong here}
+% {\bf $<$begin move to Section 3$>$}  Notably, dropout is only applied to the fully connected components, thus having no effect on the convolutional layer. The activation function used in all experiments is ReLU. Not only can ReLU avoid gradient saturation, the activated neurons always have positive values, this facilitating the analysis of subsequent hidden layers. {\bf $<$/end move to Section 3$>$}
+
+%~ Regarding the context size, we use $16$ words in the context for most
+%~ of our experiments.  {\bf $<$begin move to Section 1 or 3$>$ (as
+  %~ motivation for CNN)} Neural network language models, by their
+%~ nature, can scale up the distribution for an arbitrary context size,
+%~ which could be too sparse for count-based
+%~ models~\cite{kneser1995improved}. It is notable, however, that the
+%~ feed forward models in~\cite{hai2012measuring} do not benefit much
+%~ from a context larger than $10$, yet the author only took into account
+%~ the words in the current sentence \gbt{I don't understand from ``yet''
+  %~ to here}.  {\bf $<$/end move to Section 1 or 3$>$} We empirically
+%~ choose the size of each mini-batch (shuffled during training) as $128$
+%~ {\bf how were the parameters calibrated?} and update the parameters
+%~ with simple mini-batch gradient descent. The learning rate is
+%~ initially set to $0.05$ and gradually decreased by $2$ \gbt{you mean
+  %~ halved, right? -- ``decreased by $2$'' ambiguous} when the
+%~ validation perplexity stops decreasing, following previous work for
+%~ similar
+%~ networks~\cite{le2011structured,sukhbaatar2015end,devlin2014fast} (we
+%~ do not average the loss value over batches). Typically it takes
+%~ approximately $30$ epochs for the models (including the baseline FFLM)
+%~ to converge.
+
+%~ The experimental results for Recurrent Neural Network language models
+%~ are mostly quoted from previous works. We use the published source
+%~ code from~\cite{zaremba2014recurrent} to produce the results
+%~ for RNN and LSTM for the Europarl-NC corpus.
+
+%~ As standard in language modeling, we report perplexity \gbt{brief
+  %~ description, no need for formula.} (lower is better). 
+

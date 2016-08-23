@@ -1,11 +1,14 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces {\bf Machine translation} (MT) -- a general setup of MT. Systems build translation models from parallel corpora to translate new unseen sentences, e.g., ``She loves cute cats''.}}{2}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces {\bf Phrase-based machine translation} (MT) -- example of how phrase-based MT systems translate a source sentence ``She loves cute cats'' into a target sentence ``Elle aime les chats mignons'': sentences are split into chunks and phrases are translated. }}{2}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces {\bf Source-conditioned neural language model} (NLM) -- example of a source-conditioned NLM proposed by \citet {devlin14}. To evaluate a how likely a next word ``rive'' is, the model not only relies on previous target words (context) ``promenade le long de la'' as in traditional NLMs \cite {Bengio2003}, but also utilizes source context ``along the South Bank'' to lower uncertainty in its prediction. }}{3}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces {\bf Neural machine translation} -- example of a deep recurrent architecture proposed by \citet {sutskever14} for translating a source sentence ``I am a student'' into a target sentence ``Je suis \'{e}tudiant''. Here, ``\texttt {\_}'' marks the end of a sentence. }}{4}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Neural Language Model by Bengio et al\nobreakspace {}\cite {bengio2003neural}.}}{8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace {}\cite {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{15}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{20}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{23}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{24}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{27}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{30}
 \addvspace {10\p@ }

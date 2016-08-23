@@ -1,18 +1,43 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {chapter}{\numberline {2}Literature Review}{6}
-\contentsline {section}{\numberline {2.1}Overview}{6}
-\contentsline {section}{\numberline {2.2}Evaluation Metrics}{7}
-\contentsline {section}{\numberline {2.3}Prominent approaches in Language Models}{8}
-\contentsline {subsection}{\numberline {2.3.1}$N$-gram statistical language models}{8}
-\contentsline {subsection}{\numberline {2.3.2}Interpolated Knesey-Ney smoothing}{9}
-\contentsline {subsection}{\numberline {2.3.3}Structured language models}{9}
-\contentsline {subsection}{\numberline {2.3.4}Class based language models}{9}
-\contentsline {subsection}{\numberline {2.3.5}Maximum Entropy Language models}{9}
-\contentsline {section}{\numberline {2.4}Neural Network Language Models}{9}
-\contentsline {subsection}{\numberline {2.4.1}Feed-forward variations}{9}
-\contentsline {subsection}{\numberline {2.4.2}Recurrent Neural Network variations}{9}
-\contentsline {chapter}{\numberline {3}Neural Network Language Models}{10}
-\contentsline {chapter}{\numberline {4}Convolutional Neural Network}{11}
-\contentsline {chapter}{\numberline {5}Experiments}{12}
-\contentsline {chapter}{\numberline {6}Inside the Convolutional layer}{13}
-\contentsline {chapter}{\numberline {7}Conclusion}{14}
+\contentsline {chapter}{\numberline {2}Literature Review}{3}
+\contentsline {section}{\numberline {2.1}Language Modeling Overview}{3}
+\contentsline {subsection}{\numberline {2.1.1}About language modeling}{3}
+\contentsline {subsection}{\numberline {2.1.2}Evaluation Metrics}{4}
+\contentsline {section}{\numberline {2.2}Standard Neural Network Language Models}{5}
+\contentsline {subsection}{\numberline {2.2.1}Research Context}{5}
+\contentsline {subsection}{\numberline {2.2.2}Concept}{6}
+\contentsline {subsection}{\numberline {2.2.3}Standard architecture}{7}
+\contentsline {paragraph}{Input layer}{8}
+\contentsline {paragraph}{Hidden layer}{9}
+\contentsline {paragraph}{Output layer}{9}
+\contentsline {subsection}{\numberline {2.2.4}Training method}{10}
+\contentsline {subsection}{\numberline {2.2.5}Optimisation Process}{10}
+\contentsline {paragraph}{Objective Function}{11}
+\contentsline {paragraph}{Output layer}{11}
+\contentsline {paragraph}{Hidden layers}{11}
+\contentsline {paragraph}{Input Layer}{12}
+\contentsline {paragraph}{Parameter Update}{12}
+\contentsline {section}{\numberline {2.3}Recurrent Neural Language Models}{13}
+\contentsline {subsection}{\numberline {2.3.1}Recurrent Structure}{13}
+\contentsline {paragraph}{Recurrent Neural Networks}{14}
+\contentsline {paragraph}{Recurrent Language Models}{14}
+\contentsline {subsection}{\numberline {2.3.2}Training Recurrent Networks}{16}
+\contentsline {paragraph}{At each time step}{16}
+\contentsline {paragraph}{For global derivatives}{16}
+\contentsline {subsection}{\numberline {2.3.3}Variations}{16}
+\contentsline {paragraph}{Problems with BPTT}{16}
+\contentsline {paragraph}{Dealing with gradient vanishing}{17}
+\contentsline {paragraph}{LSTM Structure}{17}
+\contentsline {paragraph}{Training LSTM}{17}
+\contentsline {section}{\numberline {2.4}Analysis}{17}
+\contentsline {subsection}{\numberline {2.4.1}Computational Complexity}{17}
+\contentsline {subsection}{\numberline {2.4.2}Improvement Room}{17}
+\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{18}
+\contentsline {section}{\numberline {3.1}Related works}{18}
+\contentsline {section}{\numberline {3.2}Base FFLM}{19}
+\contentsline {section}{\numberline {3.3}CNN and variants}{21}
+\contentsline {chapter}{\numberline {4}Experiments}{25}
+\contentsline {chapter}{\numberline {5}Model Analysis}{27}
+\contentsline {paragraph}{Learned patterns}{27}
+\contentsline {paragraph}{Temporal information}{29}
+\contentsline {chapter}{\numberline {6}Conclusion}{31}

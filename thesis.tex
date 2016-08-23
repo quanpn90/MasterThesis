@@ -7,6 +7,15 @@
 \usepackage{times,latexsym,amsfonts,amssymb,amsmath,graphicx,url,bbm,rotating}
 \usepackage{enumitem,multirow,hhline,stmaryrd,bussproofs,mathtools,siunitx,arydshln}
 \usepackage{booktabs,xcolor,csquotes}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{kantlipsum}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{tabularx}
 %\usepackage{dirtytalk}
 % (custom libraries)
 \usepackage{fitch}
@@ -45,7 +54,6 @@
 \principaladviser{Marco Baroni}
 \firstreader{Gemma Boleda}
 \secondreader{German Kruzhevsky}
-%~ \thirdreader{Quoc V. Le}
 
 % Preface
 \beforepreface
@@ -66,17 +74,21 @@
 %\chapter{Neural Network Language Models}
 %\label{c:nnlm}
 
-\chapter{CNN Language Models}
+\chapter{Convolutional Neural Language Models}
 \label{c:cnn}
+\input{3-model.tex}
 
 \chapter{Experiments}
 \label{c:exp}
+\input{4-exp.tex}
 
-\chapter{Inside the Convolutional layer}
+\chapter{Model Analysis}
 \label{c:analysis}
+\input{5-analysis.tex}
 
 \chapter{Conclusion}
 \label{c:conc}
+\input{6-conclusion.tex}
 %~ \chapter{
 %~ \chapter{Background}
 %~ \label{c:background}

@@ -1,82 +1,173 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Bengio et~al.(2003)Bengio, Ducharme, Vincent, and Janvin]{Bengio2003}
-Y.~Bengio, R.~Ducharme, P.~Vincent, and C.~Janvin.
+\bibitem[Bengio et~al.(1994)Bengio, Simard, and Frasconi]{bengio1994learning}
+Yoshua Bengio, Patrice Simard, and Paolo Frasconi.
+\newblock Learning long-term dependencies with gradient descent is difficult.
+\newblock \emph{IEEE transactions on neural networks}, 5\penalty0 (2):\penalty0
+  157--166, 1994.
+
+\bibitem[Bengio et~al.(2003)Bengio, Ducharme, Vincent, and
+  Jauvin]{bengio2003neural}
+Yoshua Bengio, R{\'e}jean Ducharme, Pascal Vincent, and Christian Jauvin.
 \newblock A neural probabilistic language model.
-\newblock 3:\penalty0 1137--1155, 2003.
+\newblock \emph{journal of machine learning research}, 3\penalty0
+  (Feb):\penalty0 1137--1155, 2003.
 
-\bibitem[Brown et~al.(1993)Brown, Pietra, Pietra, and Mercer]{Brown:1993:MSM}
-Peter~F. Brown, Vincent J.~Della Pietra, Stephen A.~Della Pietra, and Robert~L.
-  Mercer.
-\newblock The mathematics of statistical machine translation: Parameter
-  estimation.
-\newblock 19\penalty0 (2):\penalty0 263--311, 06 1993.
+\bibitem[Bengio et~al.(2006)Bengio, Schwenk, Sen{\'e}cal, Morin, and
+  Gauvain]{bengio2006neural}
+Yoshua Bengio, Holger Schwenk, Jean-S{\'e}bastien Sen{\'e}cal, Fr{\'e}deric
+  Morin, and Jean-Luc Gauvain.
+\newblock Neural probabilistic language models.
+\newblock In \emph{Innovations in Machine Learning}, pages 137--186. Springer,
+  2006.
 
-\bibitem[Cer et~al.(2010)Cer, Galley, Jurafsky, and Manning]{cer10phrasal}
-D.~Cer, M.~Galley, D.~Jurafsky, and C.~D. Manning.
-\newblock Phrasal: A statistical machine translation toolkit for exploring new
-  model features.
-\newblock In \emph{ACL, Demonstration Session}, 2010.
+\bibitem[Bojar et~al.(2015)Bojar, Chatterjee, Federmann, Haddow, Huck, Hokamp,
+  Koehn, Logacheva, Monz, Negri, Post, Scarton, Specia, and
+  Turchi]{bojar-EtAl:2015:WMT}
+Ond\v{r}ej Bojar, Rajen Chatterjee, Christian Federmann, Barry Haddow, Matthias
+  Huck, Chris Hokamp, Philipp Koehn, Varvara Logacheva, Christof Monz, Matteo
+  Negri, Matt Post, Carolina Scarton, Lucia Specia, and Marco Turchi.
+\newblock Findings of the 2015 workshop on statistical machine translation.
+\newblock In \emph{Proceedings of the Tenth Workshop on Statistical Machine
+  Translation}, pages 1--46, Lisbon, Portugal, September 2015. Association for
+  Computational Linguistics.
+\newblock URL \url{http://aclweb.org/anthology/W15-3001}.
 
-\bibitem[Chiang(2007)]{chiang07hiero}
-David Chiang.
-\newblock Hierarchical phrase-based translation.
-\newblock 33\penalty0 (2):\penalty0 201--228, 2007.
+\bibitem[Brown et~al.(1992)Brown, Desouza, Mercer, Pietra, and
+  Lai]{brown1992class}
+Peter~F Brown, Peter~V Desouza, Robert~L Mercer, Vincent J~Della Pietra, and
+  Jenifer~C Lai.
+\newblock Class-based n-gram models of natural language.
+\newblock \emph{Computational linguistics}, 18\penalty0 (4):\penalty0 467--479,
+  1992.
 
-\bibitem[Cho et~al.(2014)Cho, van Merrienboer, Gulcehre, Bougares, Schwenk, and
-  Bengio]{cho14}
-Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Fethi Bougares, Holger
-  Schwenk, and Yoshua Bengio.
-\newblock Learning phrase representations using {RNN} encoder-decoder for
-  statistical machine translation.
-\newblock In \emph{EMNLP}, 2014.
+\bibitem[Chelba and Jelinek(2000)]{chelba2000structured}
+Ciprian Chelba and Frederick Jelinek.
+\newblock Structured language modeling.
+\newblock \emph{Computer Speech \& Language}, 14\penalty0 (4):\penalty0
+  283--332, 2000.
+
+\bibitem[Chen and Goodman(1999)]{chen1999empirical}
+Stanley~F Chen and Joshua Goodman.
+\newblock An empirical study of smoothing techniques for language modeling.
+\newblock \emph{Computer Speech \& Language}, 13\penalty0 (4):\penalty0
+  359--394, 1999.
+
+\bibitem[Collobert et~al.(2011)Collobert, Weston, Bottou, Karlen, Kavukcuoglu,
+  and Kuksa]{collobert2011natural}
+Ronan Collobert, Jason Weston, L{\'e}on Bottou, Michael Karlen, Koray
+  Kavukcuoglu, and Pavel Kuksa.
+\newblock Natural language processing (almost) from scratch.
+\newblock \emph{The Journal of Machine Learning Research}, 12:\penalty0
+  2493--2537, 2011.
 
 \bibitem[Devlin et~al.(2014)Devlin, Zbib, Huang, Lamar, Schwartz, and
-  Makhoul]{devlin14}
-J.~Devlin, R.~Zbib, Z.~Huang, T.~Lamar, R.~Schwartz, and J.~Makhoul.
+  Makhoul]{devlin2014fast}
+Jacob Devlin, Rabih Zbib, Zhongqiang Huang, Thomas Lamar, Richard~M Schwartz,
+  and John Makhoul.
 \newblock Fast and robust neural network joint models for statistical machine
   translation.
-\newblock In \emph{ACL}, 2014.
+\newblock In \emph{ACL (1)}, pages 1370--1380. Citeseer, 2014.
 
-\bibitem[Dyer et~al.(2010)Dyer, Weese, Setiawan, Lopez, Ture, Eidelman,
-  Ganitkevitch, Blunsom, and Resnik]{dyer10cdec}
-Chris Dyer, Jonathan Weese, Hendra Setiawan, Adam Lopez, Ferhan Ture, Vladimir
-  Eidelman, Juri Ganitkevitch, Phil Blunsom, and Philip Resnik.
-\newblock cdec: A decoder, alignment, and learning framework for finite-state
-  and context-free translation models.
-\newblock In \emph{ACL, Demonstration Session}, 2010.
+\bibitem[Elman(1990)]{elman1990finding}
+Jeffrey~L Elman.
+\newblock Finding structure in time.
+\newblock \emph{Cognitive science}, 14\penalty0 (2):\penalty0 179--211, 1990.
 
-\bibitem[Heafield(2011)]{kenlm}
+\bibitem[Federico et~al.(2008)Federico, Bertoldi, and
+  Cettolo]{federico2008irstlm}
+Marcello Federico, Nicola Bertoldi, and Mauro Cettolo.
+\newblock Irstlm: an open source toolkit for handling large scale language
+  models.
+\newblock In \emph{Interspeech}, pages 1618--1621, 2008.
+
+\bibitem[Filimonov and Harper(2009)]{filimonov2009joint}
+Denis Filimonov and Mary Harper.
+\newblock A joint language model with fine-grain syntactic tags.
+\newblock In \emph{Proceedings of the 2009 Conference on Empirical Methods in
+  Natural Language Processing: Volume 3-Volume 3}, pages 1114--1123.
+  Association for Computational Linguistics, 2009.
+
+\bibitem[Gu et~al.(2015)Gu, Wang, Kuen, Ma, Shahroudy, Shuai, Liu, Wang, and
+  Wang]{Gu:etal:2015}
+Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
+  Ting Liu, Xingxing Wang, and Gang Wang.
+\newblock Recent advances in convolutional neural networks.
+\newblock \emph{CoRR}, abs/1512.07108, 2015.
+
+\bibitem[Hai~Son et~al.(2011)Hai~Son, Oparin, Allauzen, Gauvain, and
+  Yvon]{le2011structured}
+Le~Hai~Son, Ilya Oparin, Alexandre Allauzen, Jean-Luc Gauvain, and
+  Fran{\c{c}}ois Yvon.
+\newblock Structured output layer neural network language model.
+\newblock In \emph{Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE
+  International Conference on}, pages 5524--5527. IEEE, 2011.
+
+\bibitem[Hai~Son et~al.(2012)Hai~Son, Allauzen, and Yvon]{hai2012measuring}
+Le~Hai~Son, Alexandre Allauzen, and Fran{\c{c}}ois Yvon.
+\newblock Measuring the influence of long range dependencies with neural
+  network language models.
+\newblock In \emph{Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever
+  Really Replace the N-gram Model? On the Future of Language Modeling for HLT},
+  pages 1--10. Association for Computational Linguistics, 2012.
+
+\bibitem[He et~al.(2015)He, Zhang, Ren, and Sun]{kaiming2015resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock \emph{arXiv preprint arXiv:1512.03385}, 2015.
+
+\bibitem[Heafield(2011)]{heafield2011kenlm}
 Kenneth Heafield.
-\newblock {KenLM:} faster and smaller language model queries.
-\newblock In \emph{WMT}, 2011.
+\newblock Kenlm: Faster and smaller language model queries.
+\newblock In \emph{Proceedings of the Sixth Workshop on Statistical Machine
+  Translation}, pages 187--197. Association for Computational Linguistics,
+  2011.
 
-\bibitem[Hutchins(2007)]{hutchins07}
-W.~John Hutchins.
-\newblock Machine translation: A concise history, 2007.
+\bibitem[Hinton et~al.(2012)Hinton, Srivastava, Krizhevsky, Sutskever, and
+  Salakhutdinov]{hinton2012dropout}
+Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
+  Ruslan Salakhutdinov.
+\newblock Improving neural networks by preventing co-adaptation of feature
+  detectors.
+\newblock \emph{CoRR}, abs/1207.0580, 2012.
+\newblock URL \url{http://arxiv.org/abs/1207.0580}.
 
-\bibitem[Jean et~al.(2015{\natexlab{a}})Jean, Cho, Memisevic, and
-  Bengio]{jean15}
-S\'{e}bastien Jean, Kyunghyun Cho, Roland Memisevic, and Yoshua Bengio.
-\newblock On using very large target vocabulary for neural machine translation.
-\newblock In \emph{ACL}, 2015{\natexlab{a}}.
+\bibitem[Hochreiter and Schmidhuber(1997)]{hochreiter1997long}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock \emph{Neural computation}, 9\penalty0 (8):\penalty0 1735--1780, 1997.
 
-\bibitem[Jean et~al.(2015{\natexlab{b}})Jean, Firat, Cho, Memisevic, and
-  Bengio]{jean15wmt}
-S\'{e}bastien Jean, Orhan Firat, Kyunghyun Cho, Roland Memisevic, and Yoshua
-  Bengio.
-\newblock Montreal neural machine translation systems for {WMT}'15.
-\newblock In \emph{WMT}, 2015{\natexlab{b}}.
+\bibitem[Hu et~al.(2014)Hu, Lu, Li, and Chen]{hu2014convolutional}
+Baotian Hu, Zhengdong Lu, Hang Li, and Qingcai Chen.
+\newblock Convolutional neural network architectures for matching natural
+  language sentences.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  2042--2050, 2014.
 
-\bibitem[Kalchbrenner and Blunsom(2013)]{kal13}
-Nal Kalchbrenner and Phil Blunsom.
-\newblock Recurrent continuous translation models.
-\newblock In \emph{EMNLP}, 2013.
+\bibitem[Ioffe and Szegedy(2015)]{DBLP:journals/corr/IoffeS15}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock \emph{arXiv preprint arXiv:1502.03167}, 2015.
+
+\bibitem[Kalchbrenner et~al.(2014)Kalchbrenner, Grefenstette, and
+  Blunsom]{Kalchbrenner2014conv}
+Nal Kalchbrenner, Edward Grefenstette, and Phil Blunsom.
+\newblock A convolutional neural network for modelling sentences.
+\newblock In \emph{Proceedings of the 52nd Annual Meeting of the Association
+  for Computational Linguistics, {ACL} 2014, June 22-27, 2014, Baltimore, MD,
+  USA, Volume 1: Long Papers}, pages 655--665, 2014.
+\newblock URL \url{http://aclweb.org/anthology/P/P14/P14-1062.pdf}.
+
+\bibitem[Kim(2014)]{kim2014sentence}
+Yoon Kim.
+\newblock Convolutional neural networks for sentence classification.
+\newblock \emph{arXiv preprint arXiv:1408.5882}, 2014.
 
 \bibitem[Kingsley(1932)]{kingsley1932selective}
 Zipf~George Kingsley.
@@ -89,11 +180,6 @@ Reinhard Kneser and Hermann Ney.
 \newblock In \emph{Acoustics, Speech, and Signal Processing, 1995. ICASSP-95.,
   1995 International Conference on}, volume~1, pages 181--184. IEEE, 1995.
 
-\bibitem[Koehn et~al.(2003)Koehn, Och, and Marcu]{Koehn:2003:SMT}
-Philipp Koehn, Franz~Josef Och, and Daniel Marcu.
-\newblock Statistical phrase-based translation.
-\newblock In \emph{NAACL}, 2003.
-
 \bibitem[Koehn et~al.(2007)Koehn, Hoang, Birch, Callison-Burch, Federico,
   Bertoldi, Cowan, Shen, Moran, Zens, et~al.]{koehn2007moses}
 Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello
@@ -104,40 +190,97 @@ Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello
   interactive poster and demonstration sessions}, pages 177--180. Association
   for Computational Linguistics, 2007.
 
-\bibitem[Liang et~al.(2006)Liang, Bouchard-C\^{o}t{\'e}, Klein, and
-  Taskar]{Liang:2006:EDA}
-Percy Liang, Alexandre Bouchard-C\^{o}t{\'e}, Dan Klein, and Ben Taskar.
-\newblock An end-to-end discriminative approach to machine translation.
-\newblock In \emph{ACL}, 2006.
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  1097--1105, 2012.
 
-\bibitem[Luong and Manning(2016)]{luong16}
-Minh-Thang Luong and Christopher~D. Manning.
-\newblock Achieving open vocabulary neural machine translation with hybrid
-  word-character models.
-\newblock In \emph{ACL}, 2016.
+\bibitem[Le et~al.(2015)Le, Jaitly, and Hinton]{le2015simple}
+Quoc~V Le, Navdeep Jaitly, and Geoffrey~E Hinton.
+\newblock A simple way to initialize recurrent networks of rectified linear
+  units.
+\newblock \emph{arXiv preprint arXiv:1504.00941}, 2015.
 
-\bibitem[Luong et~al.(2015{\natexlab{a}})Luong, Kayser, and
-  Manning]{luong15nlm}
-Minh-Thang Luong, Michael Kayser, and Christopher~D. Manning.
-\newblock Deep neural language models for machine translation.
-\newblock In \emph{CoNLL}, 2015{\natexlab{a}}.
+\bibitem[Le~Cun et~al.(1990)Le~Cun, Denker, Henderson, Howard, Hubbard, and
+  Jackel]{le1990handwritten}
+B~Boser Le~Cun, John~S Denker, D~Henderson, Richard~E Howard, W~Hubbard, and
+  Lawrence~D Jackel.
+\newblock Handwritten digit recognition with a back-propagation network.
+\newblock In \emph{Advances in neural information processing systems}.
+  Citeseer, 1990.
 
-\bibitem[Luong et~al.(2015{\natexlab{b}})Luong, Pham, and Manning]{luong15attn}
-Minh-Thang Luong, Hieu Pham, and Christopher~D. Manning.
-\newblock Effective approaches to attention-based neural machine translation.
-\newblock In \emph{EMNLP}, 2015{\natexlab{b}}.
+\bibitem[LeCun and Bengio(1995)]{lecun1995convolutional}
+Yann LeCun and Yoshua Bengio.
+\newblock Convolutional networks for images, speech, and time series.
+\newblock \emph{The handbook of brain theory and neural networks},
+  3361\penalty0 (10):\penalty0 1995, 1995.
 
-\bibitem[Luong et~al.(2015{\natexlab{c}})Luong, Sutskever, Le, Vinyals, and
-  Zaremba]{luong15}
-Minh-Thang Luong, Ilya Sutskever, Quoc~V. Le, Oriol Vinyals, and Wojciech
-  Zaremba.
-\newblock Addressing the rare word problem in neural machine translation.
-\newblock In \emph{ACL}, 2015{\natexlab{c}}.
+\bibitem[Lin et~al.(2013)Lin, Chen, and Yan]{lin2013network}
+Min Lin, Qiang Chen, and Shuicheng Yan.
+\newblock Network in network.
+\newblock \emph{arXiv preprint arXiv:1312.4400}, 2013.
 
-\bibitem[Och and Ney(2003)]{och03}
-Franz~Josef Och and Hermann Ney.
-\newblock A systematic comparison of various statistical alignment models.
-\newblock 29\penalty0 (1):\penalty0 19--51, 2003.
+\bibitem[Martens and Sutskever(2011)]{martens2011learning}
+James Martens and Ilya Sutskever.
+\newblock Learning recurrent neural networks with hessian-free optimization.
+\newblock In \emph{Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pages 1033--1040, 2011.
+
+\bibitem[Mikolov et~al.(2010)Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and
+  Khudanpur]{mikolov2010recurrent}
+Tomas Mikolov, Martin Karafi{\'a}t, Lukas Burget, Jan Cernock{\`y}, and Sanjeev
+  Khudanpur.
+\newblock Recurrent neural network based language model.
+\newblock In \emph{INTERSPEECH}, volume~2, page~3, 2010.
+
+\bibitem[Mikolov et~al.(2011)Mikolov, Kombrink, Burget, {\v{C}}ernock{\`y}, and
+  Khudanpur]{mikolov2011extensions}
+Tom{\'a}{\v{s}} Mikolov, Stefan Kombrink, Luk{\'a}{\v{s}} Burget, Jan~Honza
+  {\v{C}}ernock{\`y}, and Sanjeev Khudanpur.
+\newblock Extensions of recurrent neural network language model.
+\newblock In \emph{Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE
+  International Conference on}, pages 5528--5531. IEEE, 2011.
+
+\bibitem[Mikolov et~al.(2014)Mikolov, Joulin, Chopra, Mathieu, and
+  Ranzato]{mikolov2014learning}
+Tomas Mikolov, Armand Joulin, Sumit Chopra, Michael Mathieu, and Marc'Aurelio
+  Ranzato.
+\newblock Learning longer memory in recurrent neural networks.
+\newblock \emph{arXiv preprint arXiv:1412.7753}, 2014.
+
+\bibitem[Miller and Charles(1991)]{miller1991contextual}
+George~A Miller and Walter~G Charles.
+\newblock Contextual correlates of semantic similarity.
+\newblock \emph{Language and cognitive processes}, 6\penalty0 (1):\penalty0
+  1--28, 1991.
+
+\bibitem[Ney et~al.(1994)Ney, Essen, and Kneser]{ney1994structuring}
+Hermann Ney, Ute Essen, and Reinhard Kneser.
+\newblock On structuring probabilistic dependences in stochastic language
+  modelling.
+\newblock \emph{Computer Speech \& Language}, 8\penalty0 (1):\penalty0 1--38,
+  1994.
+
+\bibitem[Nguyen and Grishman(2015)]{nguyen2015relation}
+Thien~Huu Nguyen and Ralph Grishman.
+\newblock Relation extraction: Perspective from convolutional neural networks.
+\newblock In \emph{Proceedings of NAACL-HLT}, pages 39--48, 2015.
+
+\bibitem[Niesler and Woodland(1996)]{niesler1996variable}
+Thomas~R Niesler and Philip~C Woodland.
+\newblock A variable-length category-based n-gram language model.
+\newblock In \emph{Acoustics, Speech, and Signal Processing, 1996. ICASSP-96.
+  Conference Proceedings., 1996 IEEE International Conference on}, volume~1,
+  pages 164--167. IEEE, 1996.
+
+\bibitem[Paccanaro and Hinton(2001)]{paccanaro2001learning}
+Alberto Paccanaro and Geoffrey~E. Hinton.
+\newblock Learning distributed representations of concepts using linear
+  relational embedding.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering},
+  13\penalty0 (2):\penalty0 232--244, 2001.
 
 \bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and
   Zhu]{papineni2002bleu}
@@ -147,46 +290,86 @@ Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
   computational linguistics}, pages 311--318. Association for Computational
   Linguistics, 2002.
 
+\bibitem[Pascanu et~al.(2013)Pascanu, Mikolov, and
+  Bengio]{pascanu2013difficulty}
+Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.
+\newblock On the difficulty of training recurrent neural networks.
+\newblock \emph{ICML (3)}, 28:\penalty0 1310--1318, 2013.
+
 \bibitem[Rosenfeld(2000)]{Rosenfeld:2000}
 Ronald Rosenfeld.
 \newblock Two decades of statistical language modeling: Where do we go from
   here.
 \newblock In \emph{Proceedings of the IEEE}, page 2000, 2000.
 
-\bibitem[Schwenk(2007)]{schwenk07}
+\bibitem[Rumelhart et~al.(1985)Rumelhart, Hinton, and
+  Williams]{rumelhart1985learning}
+David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
+\newblock Learning internal representations by error propagation.
+\newblock Technical report, DTIC Document, 1985.
+
+\bibitem[Schmidhuber and Heil(1996)]{schmidhuber1996sequential}
+J{\"u}rgen Schmidhuber and Stefan Heil.
+\newblock Sequential neural text compression.
+\newblock \emph{IEEE Transactions on Neural Networks}, 7\penalty0 (1):\penalty0
+  142--146, 1996.
+
+\bibitem[Schwenk(2007)]{schwenk2007continuous}
 Holger Schwenk.
 \newblock Continuous space language models.
-\newblock \emph{Computer Speech and Languages}, 21\penalty0 (3):\penalty0
+\newblock \emph{Computer Speech \& Language}, 21\penalty0 (3):\penalty0
   492--518, 2007.
 
-\bibitem[Schwenk(2012)]{Schwenk12continuous}
-Holger Schwenk.
-\newblock Continuous space translation models for phrase-based statistical
-  machine translation.
-\newblock In \emph{COLING}, 2012.
+\bibitem[Shen et~al.(2014)Shen, He, Gao, Deng, and Mesnil]{shen2014latent}
+Yelong Shen, Xiaodong He, Jianfeng Gao, Li~Deng, and Gr{\'e}goire Mesnil.
+\newblock A latent semantic model with convolutional-pooling structure for
+  information retrieval.
+\newblock In \emph{Proceedings of the 23rd ACM International Conference on
+  Conference on Information and Knowledge Management}, pages 101--110. ACM,
+  2014.
 
-\bibitem[Sennrich et~al.(2016)Sennrich, Haddow, and Birch]{sennrich16mono}
-Rico Sennrich, Barry Haddow, and Alexandra Birch.
-\newblock Improving neural machine translation models with monolingual data.
-\newblock In \emph{ACL}, 2016.
+\bibitem[Simonyan and Zisserman(2014)]{karen2014vgg}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock \emph{arXiv preprint arXiv:1409.1556}, 2014.
 
-\bibitem[Sutskever et~al.(2014)Sutskever, Vinyals, and Le]{sutskever14}
-Ilya Sutskever, Oriol Vinyals, and Quoc~V. Le.
-\newblock Sequence to sequence learning with neural networks.
-\newblock In \emph{NIPS}, 2014.
+\bibitem[Srivastava et~al.(2015)Srivastava, Greff, and
+  Schmidhuber]{srivastava2015highway}
+Rupesh~Kumar Srivastava, Klaus Greff, and J{\"{u}}rgen Schmidhuber.
+\newblock Highway networks.
+\newblock \emph{CoRR}, abs/1505.00387, 2015.
+\newblock URL \url{http://arxiv.org/abs/1505.00387}.
 
-\bibitem[Vaswani et~al.(2013)Vaswani, Zhao, Fossum, and
-  Chiang]{vaswani13decode}
-Ashish Vaswani, Yinggong Zhao, Victoria Fossum, and David Chiang.
-\newblock Decoding with large-scale neural language models improves
-  translation.
-\newblock In \emph{EMNLP}, 2013.
+\bibitem[Sukhbaatar et~al.(2015)Sukhbaatar, Weston, Fergus,
+  et~al.]{sukhbaatar2015end}
+Sainbayar Sukhbaatar, Jason Weston, Rob Fergus, et~al.
+\newblock End-to-end memory networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  2431--2439, 2015.
 
-\bibitem[Weaver(1949)]{weaver49}
-Warren Weaver.
-\newblock Translation.
-\newblock In William~N. Locke and A.~Donald Boothe, editors, \emph{Machine
-  Translation of Languages}, pages 15--23. MIT Press, Cambridge, MA, 1949.
-\newblock Reprinted from a memorandum written by Weaver in 1949.
+\bibitem[Tieleman and Hinton(2012)]{tieleman2012lecture}
+Tijmen Tieleman and Geoffrey Hinton.
+\newblock Lecture 6.5-rmsprop: Divide the gradient by a running average of its
+  recent magnitude.
+\newblock \emph{COURSERA: Neural Networks for Machine Learning}, 4\penalty0
+  (2), 2012.
+
+\bibitem[Witten and Bell(1991)]{witten1991zero}
+Ian~H Witten and Timothy~C Bell.
+\newblock The zero-frequency problem: Estimating the probabilities of novel
+  events in adaptive text compression.
+\newblock \emph{Ieee transactions on information theory}, 37\penalty0
+  (4):\penalty0 1085--1094, 1991.
+
+\bibitem[Zaremba et~al.(2014)Zaremba, Sutskever, and
+  Vinyals]{zaremba2014recurrent}
+Wojciech Zaremba, Ilya Sutskever, and Oriol Vinyals.
+\newblock Recurrent neural network regularization.
+\newblock \emph{arXiv preprint arXiv:1409.2329}, 2014.
+
+\bibitem[Zeiler(2012)]{zeiler2012adadelta}
+Matthew~D Zeiler.
+\newblock Adadelta: an adaptive learning rate method.
+\newblock \emph{arXiv preprint arXiv:1212.5701}, 2012.
 
 \end{thebibliography}

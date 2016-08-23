@@ -1,118 +1,218 @@
 \relax 
-\citation{devlin14}
-\citation{Bengio2003}
-\citation{sutskever14}
-\citation{hutchins07}
-\citation{weaver49}
+\citation{bengio2003neural}
+\citation{mikolov2010recurrent}
+\citation{Gu:etal:2015}
+\citation{Kalchbrenner2014conv,kim2014sentence}
+\citation{hu2014convolutional}
+\citation{nguyen2015relation}
+\citation{collobert2011natural}
+\citation{kneser1995improved}
+\citation{bengio2006neural}
+\citation{schwenk2007continuous}
+\citation{mikolov2010recurrent}
+\citation{mikolov2010recurrent,le2011structured}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{c:intro}{{1}{1}}
-\citation{Brown:1993:MSM}
-\citation{Koehn:2003:SMT,och03,Liang:2006:EDA,koehn2007moses,chiang07hiero,dyer10cdec,cer10phrasal}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces {\bf  Machine translation} (MT) -- a general setup of MT. Systems build translation models from parallel corpora to translate new unseen sentences, e.g., ``She loves cute cats''.}}{2}}
-\newlabel{f:mt}{{1.1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces {\bf  Phrase-based machine translation} (MT) -- example of how phrase-based MT systems translate a source sentence ``She loves cute cats'' into a target sentence ``Elle aime les chats mignons'': sentences are split into chunks and phrases are translated. }}{2}}
-\newlabel{f:phrase_mt}{{1.2}{2}}
-\citation{Bengio2003}
-\citation{kenlm}
-\citation{schwenk07,vaswani13decode,luong15nlm}
-\citation{Schwenk12continuous,devlin14}
-\citation{devlin14}
-\citation{devlin14}
-\citation{Bengio2003}
-\citation{devlin14}
-\citation{Bengio2003}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces {\bf  Source-conditioned neural language model} (NLM) -- example of a source-conditioned NLM proposed by \citet  {devlin14}. To evaluate a how likely a next word ``rive'' is, the model not only relies on previous target words (context) ``promenade le long de la'' as in traditional NLMs \cite  {Bengio2003}, but also utilizes source context ``along the South Bank'' to lower uncertainty in its prediction. }}{3}}
-\newlabel{f:nnjm}{{1.3}{3}}
-\citation{kal13,sutskever14,cho14}
-\citation{luong15}
-\citation{jean15,luong15attn,sennrich16mono}
-\citation{jean15wmt,luong16}
-\citation{sutskever14}
-\citation{sutskever14}
-\citation{Koehn:2003:SMT}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces {\bf  Neural machine translation} -- example of a deep recurrent architecture proposed by \citet  {sutskever14} for translating a source sentence ``I am a student'' into a target sentence ``Je suis \'{e}tudiant''. Here, ``\texttt  {\_}'' marks the end of a sentence. }}{4}}
-\newlabel{f:nmt}{{1.4}{4}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Literature Review}{6}}
+\citation{zaremba2014recurrent}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Literature Review}{3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:review}{{2}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Overview}{6}}
-\newlabel{eq:lm1}{{2.1}{6}}
+\newlabel{c:review}{{2}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Language Modeling Overview}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}About language modeling}{3}}
 \citation{papineni2002bleu}
 \citation{Rosenfeld:2000}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Evaluation Metrics}{7}}
-\newlabel{eq:ppl}{{2.2}{7}}
+\newlabel{eq:lm1}{{2.1}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Evaluation Metrics}{4}}
+\newlabel{eq:ppl}{{2.2}{4}}
+\citation{kneser1995improved,chen1999empirical,heafield2011kenlm,federico2008irstlm,ney1994structuring,witten1991zero}
+\citation{brown1992class,niesler1996variable}
+\citation{chelba2000structured,filimonov2009joint}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Standard Neural Network Language Models}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Research Context}{5}}
+\newlabel{eq:markov}{{2.3}{5}}
 \citation{kingsley1932selective}
-\citation{kneser1995improved}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Prominent approaches in Language Models}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}$N$-gram statistical language models}{8}}
-\newlabel{eq:markov}{{2.3}{8}}
-\newlabel{eq:ngramMLE}{{2.4}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Interpolated Knesey-Ney smoothing}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Structured language models}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Class based language models}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.5}Maximum Entropy Language models}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Neural Network Language Models}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Feed-forward variations}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Recurrent Neural Network variations}{9}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Neural Network Language Models}{10}}
+\citation{bengio2006neural}
+\citation{bengio2003neural}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Concept}{6}}
+\citation{miller1991contextual}
+\citation{paccanaro2001learning}
+\citation{schmidhuber1996sequential}
+\citation{bengio2003neural}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Standard architecture}{7}}
+\citation{bengio2003neural}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Neural Language Model by Bengio et al\nobreakspace  {}\cite  {bengio2003neural}.}}{8}}
+\newlabel{fig:neuralBengio}{{2.1}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Input layer}{8}}
+\@writefile{toc}{\contentsline {paragraph}{Hidden layer}{9}}
+\newlabel{eq:hidden1}{{2.5}{9}}
+\newlabel{eq:activation}{{2.6}{9}}
+\@writefile{toc}{\contentsline {paragraph}{Output layer}{9}}
+\newlabel{eq:linearoutput}{{2.7}{9}}
+\citation{zaremba2014recurrent,le2011structured,mikolov2010recurrent}
+\citation{zeiler2012adadelta}
+\citation{tieleman2012lecture}
+\citation{le1990handwritten}
+\citation{rumelhart1985learning}
+\newlabel{eq:softmax}{{2.8}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Training method}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Optimisation Process}{10}}
+\@writefile{toc}{\contentsline {paragraph}{Objective Function}{11}}
+\newlabel{eq:objective}{{2.9}{11}}
+\newlabel{eq:objective2}{{2.10}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Output layer}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Hidden layers}{11}}
+\newlabel{eq:dhidden}{{2.14}{12}}
+\newlabel{eq:dactivation}{{2.15}{12}}
+\@writefile{toc}{\contentsline {paragraph}{Input Layer}{12}}
+\@writefile{toc}{\contentsline {paragraph}{Parameter Update}{12}}
+\citation{schwenk2007continuous,le2011structured}
+\citation{elman1990finding}
+\newlabel{eq:sgd}{{2.16}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Recurrent Neural Language Models}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Recurrent Structure}{13}}
+\citation{mikolov2010recurrent}
+\citation{elman1990finding}
+\citation{mikolov2010recurrent}
+\@writefile{toc}{\contentsline {paragraph}{Recurrent Neural Networks}{14}}
+\@writefile{toc}{\contentsline {paragraph}{Recurrent Language Models}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace  {}\cite  {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{15}}
+\newlabel{fig:SimpleRNN}{{2.2}{15}}
+\citation{bengio1994learning,pascanu2013difficulty}
+\citation{mikolov2011extensions,hai2012measuring}
+\citation{pascanu2013difficulty}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Training Recurrent Networks}{16}}
+\@writefile{toc}{\contentsline {paragraph}{At each time step}{16}}
+\@writefile{toc}{\contentsline {paragraph}{For global derivatives}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Variations}{16}}
+\@writefile{toc}{\contentsline {paragraph}{Problems with BPTT}{16}}
+\citation{mikolov2014learning}
+\citation{le2015simple}
+\citation{martens2011learning}
+\citation{hochreiter1997long}
+\@writefile{toc}{\contentsline {paragraph}{Dealing with gradient vanishing}{17}}
+\@writefile{toc}{\contentsline {paragraph}{LSTM Structure}{17}}
+\@writefile{toc}{\contentsline {paragraph}{Training LSTM}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Analysis}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Computational Complexity}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Improvement Room}{17}}
+\citation{lecun1995convolutional}
+\citation{karen2014vgg,kaiming2015resnet}
+\citation{kim2014sentence}
+\citation{Kalchbrenner2014conv}
+\citation{hu2014convolutional}
+\citation{nguyen2015relation}
+\citation{shen2014latent}
+\citation{collobert2011natural}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{18}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:nnlm}{{3}{10}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Convolutional Neural Network}{11}}
+\newlabel{c:cnn}{{3}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Related works}{18}}
+\citation{bengio2006neural}
+\citation{srivastava2015highway}
+\citation{hinton2012dropout}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Base FFLM}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{20}}
+\newlabel{fig:baseline}{{3.1}{20}}
+\citation{DBLP:journals/corr/IoffeS15}
+\citation{lin2013network}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}CNN and variants}{21}}
+\citation{Kalchbrenner2014conv}
+\citation{kim2014sentence}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{23}}
+\newlabel{fig:simpleconv}{{3.2}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{24}}
+\newlabel{fig:combine}{{3.3}{24}}
+\citation{mikolov2014learning}
+\citation{bojar-EtAl:2015:WMT}
+\citation{koehn2007moses}
+\citation{le2011structured,sukhbaatar2015end,devlin2014fast}
+\citation{tieleman2012lecture}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiments}{25}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:cnn}{{4}{11}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiments}{12}}
+\newlabel{c:exp}{{4}{25}}
+\citation{zaremba2014recurrent}
+\citation{krizhevsky2012imagenet}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{27}}
+\newlabel{fig:kernels}{{5.1}{27}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Model Analysis}{27}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:exp}{{5}{12}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Inside the Convolutional layer}{13}}
+\newlabel{c:analysis}{{5}{27}}
+\@writefile{toc}{\contentsline {paragraph}{Learned patterns}{27}}
+\citation{hai2012measuring}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{28}}
+\newlabel{fig:weight-dist}{{5.2}{28}}
+\@writefile{toc}{\contentsline {paragraph}{Temporal information}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{30}}
+\newlabel{fig:position}{{5.3}{30}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{31}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:analysis}{{6}{13}}
+\newlabel{c:conc}{{6}{31}}
 \bibstyle{plainnat}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{14}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:conc}{{7}{14}}
-\bibcite{Bengio2003}{{1}{2003}{{Bengio et~al.}}{{Bengio, Ducharme, Vincent, and Janvin}}}
-\bibcite{Brown:1993:MSM}{{2}{1993}{{Brown et~al.}}{{Brown, Pietra, Pietra, and Mercer}}}
-\bibcite{cer10phrasal}{{3}{2010}{{Cer et~al.}}{{Cer, Galley, Jurafsky, and Manning}}}
-\bibcite{chiang07hiero}{{4}{2007}{{Chiang}}{{}}}
-\bibcite{cho14}{{5}{2014}{{Cho et~al.}}{{Cho, van Merrienboer, Gulcehre, Bougares, Schwenk, and Bengio}}}
-\bibcite{devlin14}{{6}{2014}{{Devlin et~al.}}{{Devlin, Zbib, Huang, Lamar, Schwartz, and Makhoul}}}
-\bibcite{dyer10cdec}{{7}{2010}{{Dyer et~al.}}{{Dyer, Weese, Setiawan, Lopez, Ture, Eidelman, Ganitkevitch, Blunsom, and Resnik}}}
-\bibcite{kenlm}{{8}{2011}{{Heafield}}{{}}}
-\bibcite{hutchins07}{{9}{2007}{{Hutchins}}{{}}}
-\bibcite{jean15}{{10}{2015{}}{{Jean et~al.}}{{Jean, Cho, Memisevic, and Bengio}}}
-\bibcite{jean15wmt}{{11}{2015{}}{{Jean et~al.}}{{Jean, Firat, Cho, Memisevic, and Bengio}}}
-\bibcite{kal13}{{12}{2013}{{Kalchbrenner and Blunsom}}{{}}}
-\bibcite{kingsley1932selective}{{13}{1932}{{Kingsley}}{{}}}
-\bibcite{kneser1995improved}{{14}{1995}{{Kneser and Ney}}{{}}}
-\bibcite{Koehn:2003:SMT}{{15}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
-\bibcite{koehn2007moses}{{16}{2007}{{Koehn et~al.}}{{Koehn, Hoang, Birch, Callison-Burch, Federico, Bertoldi, Cowan, Shen, Moran, Zens, et~al.}}}
-\bibcite{Liang:2006:EDA}{{17}{2006}{{Liang et~al.}}{{Liang, Bouchard-C\^{o}t{\'e}, Klein, and Taskar}}}
-\bibcite{luong16}{{18}{2016}{{Luong and Manning}}{{}}}
-\bibcite{luong15nlm}{{19}{2015{}}{{Luong et~al.}}{{Luong, Kayser, and Manning}}}
-\bibcite{luong15attn}{{20}{2015{}}{{Luong et~al.}}{{Luong, Pham, and Manning}}}
-\bibcite{luong15}{{21}{2015{}}{{Luong et~al.}}{{Luong, Sutskever, Le, Vinyals, and Zaremba}}}
-\bibcite{och03}{{22}{2003}{{Och and Ney}}{{}}}
-\bibcite{papineni2002bleu}{{23}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
-\bibcite{Rosenfeld:2000}{{24}{2000}{{Rosenfeld}}{{}}}
-\bibcite{schwenk07}{{25}{2007}{{Schwenk}}{{}}}
-\bibcite{Schwenk12continuous}{{26}{2012}{{Schwenk}}{{}}}
-\bibcite{sennrich16mono}{{27}{2016}{{Sennrich et~al.}}{{Sennrich, Haddow, and Birch}}}
-\bibcite{sutskever14}{{28}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
-\bibcite{vaswani13decode}{{29}{2013}{{Vaswani et~al.}}{{Vaswani, Zhao, Fossum, and Chiang}}}
-\bibcite{weaver49}{{30}{1949}{{Weaver}}{{}}}
+\bibcite{bengio1994learning}{{1}{1994}{{Bengio et~al.}}{{Bengio, Simard, and Frasconi}}}
+\bibcite{bengio2003neural}{{2}{2003}{{Bengio et~al.}}{{Bengio, Ducharme, Vincent, and Jauvin}}}
+\bibcite{bengio2006neural}{{3}{2006}{{Bengio et~al.}}{{Bengio, Schwenk, Sen{\'e}cal, Morin, and Gauvain}}}
+\bibcite{bojar-EtAl:2015:WMT}{{4}{2015}{{Bojar et~al.}}{{Bojar, Chatterjee, Federmann, Haddow, Huck, Hokamp, Koehn, Logacheva, Monz, Negri, Post, Scarton, Specia, and Turchi}}}
+\bibcite{brown1992class}{{5}{1992}{{Brown et~al.}}{{Brown, Desouza, Mercer, Pietra, and Lai}}}
+\bibcite{chelba2000structured}{{6}{2000}{{Chelba and Jelinek}}{{}}}
+\bibcite{chen1999empirical}{{7}{1999}{{Chen and Goodman}}{{}}}
+\bibcite{collobert2011natural}{{8}{2011}{{Collobert et~al.}}{{Collobert, Weston, Bottou, Karlen, Kavukcuoglu, and Kuksa}}}
+\bibcite{devlin2014fast}{{9}{2014}{{Devlin et~al.}}{{Devlin, Zbib, Huang, Lamar, Schwartz, and Makhoul}}}
+\bibcite{elman1990finding}{{10}{1990}{{Elman}}{{}}}
+\bibcite{federico2008irstlm}{{11}{2008}{{Federico et~al.}}{{Federico, Bertoldi, and Cettolo}}}
+\bibcite{filimonov2009joint}{{12}{2009}{{Filimonov and Harper}}{{}}}
+\bibcite{Gu:etal:2015}{{13}{2015}{{Gu et~al.}}{{Gu, Wang, Kuen, Ma, Shahroudy, Shuai, Liu, Wang, and Wang}}}
+\bibcite{le2011structured}{{14}{2011}{{Hai~Son et~al.}}{{Hai~Son, Oparin, Allauzen, Gauvain, and Yvon}}}
+\bibcite{hai2012measuring}{{15}{2012}{{Hai~Son et~al.}}{{Hai~Son, Allauzen, and Yvon}}}
+\bibcite{kaiming2015resnet}{{16}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
+\bibcite{heafield2011kenlm}{{17}{2011}{{Heafield}}{{}}}
+\bibcite{hinton2012dropout}{{18}{2012}{{Hinton et~al.}}{{Hinton, Srivastava, Krizhevsky, Sutskever, and Salakhutdinov}}}
+\bibcite{hochreiter1997long}{{19}{1997}{{Hochreiter and Schmidhuber}}{{}}}
+\bibcite{hu2014convolutional}{{20}{2014}{{Hu et~al.}}{{Hu, Lu, Li, and Chen}}}
+\bibcite{DBLP:journals/corr/IoffeS15}{{21}{2015}{{Ioffe and Szegedy}}{{}}}
+\bibcite{Kalchbrenner2014conv}{{22}{2014}{{Kalchbrenner et~al.}}{{Kalchbrenner, Grefenstette, and Blunsom}}}
+\bibcite{kim2014sentence}{{23}{2014}{{Kim}}{{}}}
+\bibcite{kingsley1932selective}{{24}{1932}{{Kingsley}}{{}}}
+\bibcite{kneser1995improved}{{25}{1995}{{Kneser and Ney}}{{}}}
+\bibcite{koehn2007moses}{{26}{2007}{{Koehn et~al.}}{{Koehn, Hoang, Birch, Callison-Burch, Federico, Bertoldi, Cowan, Shen, Moran, Zens, et~al.}}}
+\bibcite{krizhevsky2012imagenet}{{27}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
+\bibcite{le2015simple}{{28}{2015}{{Le et~al.}}{{Le, Jaitly, and Hinton}}}
+\bibcite{le1990handwritten}{{29}{1990}{{Le~Cun et~al.}}{{Le~Cun, Denker, Henderson, Howard, Hubbard, and Jackel}}}
+\bibcite{lecun1995convolutional}{{30}{1995}{{LeCun and Bengio}}{{}}}
+\bibcite{lin2013network}{{31}{2013}{{Lin et~al.}}{{Lin, Chen, and Yan}}}
+\bibcite{martens2011learning}{{32}{2011}{{Martens and Sutskever}}{{}}}
+\bibcite{mikolov2010recurrent}{{33}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
+\bibcite{mikolov2011extensions}{{34}{2011}{{Mikolov et~al.}}{{Mikolov, Kombrink, Burget, {\v {C}}ernock{\`y}, and Khudanpur}}}
+\bibcite{mikolov2014learning}{{35}{2014}{{Mikolov et~al.}}{{Mikolov, Joulin, Chopra, Mathieu, and Ranzato}}}
+\bibcite{miller1991contextual}{{36}{1991}{{Miller and Charles}}{{}}}
+\bibcite{ney1994structuring}{{37}{1994}{{Ney et~al.}}{{Ney, Essen, and Kneser}}}
+\bibcite{nguyen2015relation}{{38}{2015}{{Nguyen and Grishman}}{{}}}
+\bibcite{niesler1996variable}{{39}{1996}{{Niesler and Woodland}}{{}}}
+\bibcite{paccanaro2001learning}{{40}{2001}{{Paccanaro and Hinton}}{{}}}
+\bibcite{papineni2002bleu}{{41}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
+\bibcite{pascanu2013difficulty}{{42}{2013}{{Pascanu et~al.}}{{Pascanu, Mikolov, and Bengio}}}
+\bibcite{Rosenfeld:2000}{{43}{2000}{{Rosenfeld}}{{}}}
+\bibcite{rumelhart1985learning}{{44}{1985}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{schmidhuber1996sequential}{{45}{1996}{{Schmidhuber and Heil}}{{}}}
+\bibcite{schwenk2007continuous}{{46}{2007}{{Schwenk}}{{}}}
+\bibcite{shen2014latent}{{47}{2014}{{Shen et~al.}}{{Shen, He, Gao, Deng, and Mesnil}}}
+\bibcite{karen2014vgg}{{48}{2014}{{Simonyan and Zisserman}}{{}}}
+\bibcite{srivastava2015highway}{{49}{2015}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
+\bibcite{sukhbaatar2015end}{{50}{2015}{{Sukhbaatar et~al.}}{{Sukhbaatar, Weston, Fergus, et~al.}}}
+\bibcite{tieleman2012lecture}{{51}{2012}{{Tieleman and Hinton}}{{}}}
+\bibcite{witten1991zero}{{52}{1991}{{Witten and Bell}}{{}}}
+\bibcite{zaremba2014recurrent}{{53}{2014}{{Zaremba et~al.}}{{Zaremba, Sutskever, and Vinyals}}}
+\bibcite{zeiler2012adadelta}{{54}{2012}{{Zeiler}}{{}}}

@@ -1,0 +1,50 @@
+In this work, we have investigated the use of Convolutional Neural
+Networks for language modeling, a sequential prediction task.
+%\newgbt{for the future}
+%To this end we extended earlier feed-forward language models with
+%current techniques to obtain a base model that yields competitive
+%results from the start.
+We incorporate a CNN layer on top of a strong feed-forward model
+enhanced with modern techniques like Highway Layers and Dropout. Our results
+show a solid 13\% improvement in perplexity with respect to the
+feed-forward model across two corpora of different sizes and genres 
+when the model uses Network-in-Network 
+and combine kernels of different window sizes. However, even without these additions
+we show CNNs to effectively learn language patterns to significantly 
+decrease the model perplexity.
+
+In our view, this improvement responds to two key properties of CNNs,
+highlighted in the analysis. First, as we have shown, they are able to
+integrate information from larger context windows, using information
+from words that are as far as 16 positions away from the predicted
+word. Second, as we have qualitatively shown, the kernels learn to
+detect specific patterns at a high level of abstraction. This is
+analogous to the role of convolutions in Computer Vision. The analogy,
+however, has limits; for instance, a deeper model stacking convolution
+layers harms performance in language modeling, while it greatly helps
+in Computer Vision. We conjecture that this is due to the differences
+in the nature of visual vs.\ linguistic data. The convolution creates
+sort of abstract images that still retain significant properties of
+images. When applied to language, it detects important textual
+features but distorts the input, such that it is not text anymore.
+%described a variant of feed-forward language models, in which the convolutional neural networks are used to improve local representation on top of 
+%word embeddings. Despite the fact that language modeling is a difficult sequential task, the presence of convolutional neural networks is still empirically useful compared to 
+%the feed-forward baseline, by performing competitively with the state-of-the-art models. 
+
+As for recurrent models, even if our model outperforms RNNs, it is
+well below state-of-the-art LSTMs. Since CNNs are quite different in
+nature, we believe that a fruitful line of future research could focus
+on integrating the convolutional layer into a recurrent structure for
+language modeling, as well as other sequential problems, perhaps
+capturing the best of both worlds.
+
+% More importantly, despite the fact that convolutional and feed forward
+% neural network in general are not as well designed as recurrent
+% network for language modeling, we still manage to find setups that
+% allow them to well perform. Further investigation of convolutional
+% neural network can be useful for text understanding.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

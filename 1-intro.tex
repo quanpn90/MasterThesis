@@ -91,8 +91,22 @@ upcoming word. %Particularly, the model proposed by
 %linguistic patterns and that the model can take into account context
 %information which is very far from the target.
 
-In this paper we define and explore CNN-based language models and
-compare them with both feed-forward and recurrent neural networks. Our
+%In this paper we define and explore CNN-based language models and
+%compare them with both feed-forward and recurrent neural networks. Our
+%results show a 13\% perplexity improvement of the CNN with respect to
+%the feed-forward language model, while comparable or higher performance
+%compared to similarly-sized recurrent models, and lower performance
+%with respect to larger, state-of-the-art recurrent language
+%models~(LSTMs as trained in~\newcite{zaremba2014recurrent}).
+%
+%Our second contribution is an analysis of the kind of information
+%learned by the CNN, showing that the network learns to extract a
+%combination of grammatical, semantic, and topical information from
+%tokens of all across the input window, even those that are the
+%farthest from the target.
+
+In the thesis, we define and explore the feed-forward neural network language models a
+ugmented with convolutional layers and compare them with original feed-forward and recurrent neural networks. Our
 results show a 13\% perplexity improvement of the CNN with respect to
 the feed-forward language model, while comparable or higher performance
 compared to similarly-sized recurrent models, and lower performance
@@ -105,7 +119,15 @@ combination of grammatical, semantic, and topical information from
 tokens of all across the input window, even those that are the
 farthest from the target.
 
-%~ \gk{Add number of parameters to support the next claim or rephrase}
+In brief, this thesis is organised as follows. Chapter~\ref{c:review} is 
+dedicated to provide background knowledge about the motivation, architecture and
+progress of neural language models by covering the details of the original
+feed-forward and recurrent language models with most techniques applied in 
+state-of-the-art systems. In chapter~\ref{c:cnn}, we describe the proposed
+model with the addition of convolutional layers. Subsequently, details about the 
+experiments will be delivered in Chapter~\ref{c:exp}. Finally, the model analysis in which we  will be presented in Chapter~\ref{c:analysis}.
+
+
 
 %In this work, we investigate the feed-forward neural language models with temporal convolutional neural networks applied on the context embeddings. The concept of this structure has already been introduced~\cite{collobert2011natural}, in which the network is equipped with a convolutional-pooling mechanism to find the features for multiple natural language processing tasks including language modeling. However, it is unknown if the convolution networks deliver any improvement over the feed-forward counterpart. For that purpose, we initially train a carefully tuned feed-forward neural language model, which yield competitive performance in various corpora. Subsequently, we enhance the baseline with an additional convolutional layer that convolves over the word embeddings. The network is setup so that: the layers between two models are almost identical except the convolutional layers, and we can effortlessly limit the hyperparameter space for network training. The experimental results indicate that using convolutional layers can improve 15-20\% perplexity compared to the solid baseline, and the CNN model can perform on par with the state-of-the-art models. Our analysis also shows that the convolutional kernels independently learned to focus on different linguistic patterns, and the model can take into account context words at very far from the target. 
 
