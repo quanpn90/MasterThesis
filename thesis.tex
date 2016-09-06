@@ -44,6 +44,9 @@
 \newcommand{\error}[1]{{\color{red} #1}}
 \newcommand{\ngram}{$n$-gram}
 \newcommand{\word}[1]{``#1''}
+\newcommand{\starts}{\text{\textless s\textgreater}}
+
+\setcounter{secnumdepth}{3}
 
 % -- Document --
 \begin{document}
@@ -58,7 +61,7 @@
 % Preface
 \beforepreface
 %\input preface.tex
-%\input ack.tex
+\input ack.tex
 \afterpreface
 
 
@@ -67,9 +70,10 @@
 \label{c:intro}
 \input{1-intro.tex}
 
-\chapter{Literature Review}
+\chapter{Background}
 \label{c:review}
 \input{2-review.tex}
+%\input{2-background.tex}
 
 %\chapter{Neural Network Language Models}
 %\label{c:nnlm}
@@ -85,6 +89,10 @@
 \chapter{Model Analysis}
 \label{c:analysis}
 \input{5-analysis.tex}
+
+\chapter{Related Works}
+\label{c:related}
+\input{6-related.tex}
 
 \chapter{Conclusion}
 \label{c:conc}
@@ -116,7 +124,8 @@
 
 % -- Appendix --
 \appendix
-
+\chapter{Publications by Author}
+\input{appendix.tex}
 
 \bibliographystyle{plainnat}
 \bibliography{thesis}

@@ -1,57 +1,97 @@
-Convolutional Neural Networks (CNNs) are the family of neural network
-models that feature a type of layer known as the convolutional
-layer. This layer can extract features by convolving a learnable filter (or
-kernel) along different positions of a vectorial input.
+Exploiting the information from textual data (corpora) for artificial intelligent systems is one
+of the most important targets of Natural Language Processing (NLP). Applications that can benefit 
+from this textual knowledge include Machine Translation, Information Extraction, Search Engine, Automatic 
+Speech Recognition or Text to Speech~\dots
 
-CNNs have been successfully applied in Computer Vision in many
-different tasks, including object recognition, scene parsing, action
-recognition, among others~\cite{Gu:etal:2015}, but they have received less
-attention in NLP. Mainly, they have been somewhat explored in
-\emph{static classification tasks} where the model is provided with a
+The language modeling problem was formulated in order to successfully extract the knowledge about languages from the corpora. The main purpose of a language model is to model the linguistic regularities of language by capturing the morphological, syntactical and semantic properties of a given language. Such a model should ideally be able to assess the likelihood of an arbitrary sentence in a particular context. In the last decades, the language modeling problem has been approached with statistical methods. As a standard, the language models are trained so as to predict the upcoming word given its previous context, which are the words appearing before the word to be predicted. The word and its context is usually referred as an~\textbf{$n$-gram}, which is a contiguous sequence of $n$ tokens (words in textual data), consisting of one word to be predicted and $n-1$ words in the given context. For example, the word combination ``The dog runs'' is an $n$-gram with order of $3$, and the language models aim at predicting the word ``runs'' given the context ``the dog''. 
+
+The conventional approach to this problem relies on the satistical point of view, which is assigning probabilities for sentences by counting the number of occurrences of $n$-grams in the corpora to estimate the probabilities. Problems arise when  the model has to estimate the probabilities of word sequences that are rare in the corpus, or do not appear at all, but still make sense in human languages. There are techniques that estimate the distribution of rare $n$-grams based on the seen ones (also referred as smoothing techniques) or using the statistics of lower order $n$-grams (back-off techniques)~\cite{kneser1995improved,chen1999empirical,heafield2011kenlm,federico2008irstlm,ney1994structuring,witten1991zero}. 
+
+ The main disadvantage of these models is that each individual word is treated independently of the others, count-based $n$-gram models fail to capture semantic relations between words. As a result, those models suffer from two weaknesses. First, they are limited by a small context size, since the number of possible $n$-grams grows exponentially with the $n$-gram order. For example, if the language vocabulary 
+ contains $10000$ words then there are $10^{24}$ possible 6-grams to be estimated, which cannot be covered by any corpora as a consequence of the Zipf's law~\cite{kingsley1932selective}. Second, it is not able to infer the estimation of an unknown word string based on similar sequences. For example, if a good language model has seen the sentence ``The cat runs'', then it should be able to tell that the unseen sentence ``A dog runs'' is valid, given the semantic similarity between the articles ``a'' and ``the'', and the pets ``cat'' and ``dog''. 
+ 
+ In contrast neural network language models~\cite{bengio2006neural} became a solution for the problems of $n$-gram models. The success of neural network language models 
+ is achieved based on two key ideas. First, the models learn the~\textit{distributed representation} of words, which express the word meaning with low dimensional vectors which can represent the similarity structure between words. Second, the statistical language model is viewed as a machine learning classification problem, in which the model tries to~\textit{discriminate} the predicted word from other words in the vocabulary. The models, initially proposed by~\newcite{bengio2006neural} and then enhanced by~\newcite{schwenk2007continuous,le2011structured,vaswani2013decoding,mikolov2010recurrent} have been shown to outperform the count-based $n$-gram models. 
+ 
+Neural networks (or Artificial neural networks) are a class of machine learning models that is inspired by biological neural network. They are well-known to be flexible and powerful in terms of learning representations in various problems, including Language Processing. Among the commonly used architectures of neural networks, there are two different structures applied successfully in language modeling: feed-forward networks and recurrent networks, making different architectural decisions. 
+
+Recurrent networks~\cite{mikolov2010recurrent,mikolov2011extensions} treat language modeling as a sequence prediction problem by taking one word token at a time together with a hidden ``memory'' mechanism to produce a predicted word and update the memory for next time step. Importantly, they are strong enough to represent any $n$-gram at arbitray size. Contrarily, feed-forward models take as input the last $n-1$ words in the $n$-gram, where $n$ has to be a fixed window size, and use them jointly to predict the upcoming word. 
+
+%Particularly, the model proposed by~\newcite{bengio2006neural} uses a concatenation of the word embeddings corresponding to the input context and then projects them into a hidden layer which can learn interactions between these words. 
+%
+%Theoretically, neural networks with deep architecture (more hidden layers) can learn a hierarchical representation of the input. However, attempts to stack more hidden layers has only given little benefit~\cite{arisoy2012deep}. 
+
+
+Despite the fact that the state-of-the-art language models consist of a shared vector space between words, they still treat the context as a sequence of discrete symbols. The feed-forward network simply concatenate the word vectors and encodes the context into the hidden layer, while the recurrent models take one word as a time step, whose weakness is that a particular time step does not have any information about future steps. In fact, it is useful to take into account the collocations and multi-word expressions in the context. For example, the English word ``get'' can acquire different meanings when paired with different prepositions, which the word embeddings hardly can represent. Such word combinations are often identified by statistical methods~\cite{sag2002multiword}, which requires an intensive scanning through the data to find frequent combinations. In the context of the neural networks, it is intuitive to use a special neural network architecture that can search the context for patterns and combinations. 
+
+In the literature of machine learning and computer vision, Convolutional Neural Networks (CNNs) are the family of neural network models that feature a type of layer known as the convolutional
+layer. The main idea of this layer is to look at each position of the input (at any dimension) with a fixed size window and find local features - distinctive attribute that are useful for the learning task. The network has been applied successfully in image processing and speech processing~\cite{Gu:etal:2015} but they have received less attention in Natural Language Processing. Mainly, they have been somewhat explored in \emph{static classification tasks} where the model is provided with a
 full linguistic unit as input (e.g.\ a sentence) and classes are
-treated as independent of each other. Examples of this are sentence or
-document classification for tasks such as Sentiment Analysis or Topic
-Categorization \cite{Kalchbrenner2014conv,kim2014sentence}, sentence
-matching
+treated as independent of each other Examples of this are sentence or document classification for tasks such as Sentiment Analysis or Topic Categorization \cite{Kalchbrenner2014conv,kim2014sentence}, sentence matching \cite{hu2014convolutional}, and relation extraction~\cite{nguyen2015relation}. However, their application to \emph{sequential prediction tasks}, where the input is construed to be part of a sequence (for example, language modeling or POS tagging), has been rather limited (with exceptions, such as~\newcite{collobert2011natural}). 
+
+The language modeling in the work of~\newcite{collobert2011natural} utilised the convolutional layers to extract features for multiple natural language processing tasks including language modeling. However, due to the computational limit, the model was altered to focus on learning vectorised word representation, leaving the language modeling quality a question mark. In this thesis, we investigate the~\textbf{feed-forward} neural language models with the temporal convolutional layer inspired by the work of~\cite{collobert2011natural}. Starting by analysing the existing neural language models including feed-forward and recurrent ones, we investigate the convolutional models with some reasonable changes in terms of architecture to verify if the convolutional neural network deliver any improvement over the feed-forward counterpart. For that purpose, we initially train a carefully tuned feed-forward neural language model , which yield competitive performance in various corpora. Subsequently, we enhance the baseline with an additional convolutional layer that convolves over the word embeddings, and we can effortlessly limit the customization space for network architecture during training. The experimental results indicate that using convolutional layers can improve 15-20\% perplexity compared to the solid baseline, and the CNN model can perform on par with the state-of-the-art models. Our analysis also shows that the convolutional layer independently learned to focus on different linguistic patterns, and the model can take into account context words at very far from the target. 
+
+%In this work, we investigate the feed-forward neural language models with temporal convolutional neural networks applied on the context embeddings. The concept of this structure has already been introduced~\cite{collobert2011natural}, in which the network is equipped with a convolutional-pooling mechanism to find the features for multiple natural language processing tasks including language modeling. However, it is unknown if the convolution networks deliver any improvement over the feed-forward counterpart. For that purpose, we initially train a carefully tuned feed-forward neural language model, which yield competitive performance in various corpora. Subsequently, we enhance the baseline with an additional convolutional layer that convolves over the word embeddings. The network is setup so that: the layers between two models are almost identical except the convolutional layers, and we can effortlessly limit the hyperparameter space for network training. The experimental results indicate that using convolutional layers can improve 15-20\% perplexity compared to the solid baseline, and the CNN model can perform on par with the state-of-the-art models. Our analysis also shows that the convolutional kernels independently learned to focus on different linguistic patterns, and the model can take into account context words at very far from the target. 
+
+
+
+%The main contribution of this paper is a systematic evaluation of CNNs in the context of a prominent sequential prediction task, namely, language modeling.  We show that CNNs achieve good results that, even if below the state of the art, but well above those of feed forward neural networks and even Recurrent Neural Networks (RNNs).
+
+
+
+
+%
+%models that feature a type of layer known as the convolutional
+%layer. This layer can extract features by convolving a learnable filter (or
+%kernel) along different positions of a vectorial input. CNNs have been successfully applied in Computer Vision in many
+%different tasks, including object recognition, scene parsing, action
+%recognition, among others~\cite{Gu:etal:2015}, but they have received less
+%attention in NLP. Mainly, they have been somewhat explored in
+%\emph{static classification tasks} where the model is provided with a
+%full linguistic unit as input (e.g.\ a sentence) and classes are
+%treated as independent of each other. Examples of this are sentence or
+%document classification for tasks such as Sentiment Analysis or Topic
+%Categorization \cite{Kalchbrenner2014conv,kim2014sentence}, sentence
+%matching
 % \newgbt{what is sentence matching?}
-\cite{hu2014convolutional}, and relation extraction
-\cite{nguyen2015relation}. However, their application to
-\emph{sequential prediction tasks}, where the input is construed to be
-part of a sequence (for example, language modeling or POS tagging),
-has been rather limited (with exceptions, such
-as~\newcite{collobert2011natural}). The main contribution of this
-paper is a systematic evaluation of CNNs in the context of a prominent
-sequential prediction task, namely, language modeling.
+%\cite{hu2014convolutional}, and relation extraction
+%\cite{nguyen2015relation}. However, their application to
+%\emph{sequential prediction tasks}, where the input is construed to be
+%part of a sequence (for example, language modeling or POS tagging),
+%has been rather limited (with exceptions, such
+%as~\newcite{collobert2011natural}). The main contribution of this
+%paper is a systematic evaluation of CNNs in the context of a prominent
+%sequential prediction task, namely, language modeling.
 % We show that
-% CNNs achieve good results that, even if below the state of the art, but well
+%% CNNs achieve good results that, even if below the state of the art, but well
 % above those of feed forward neural networks and even Recurrent Neural
 % Networks (RNNs).
 
-Statistical language models are a crucial component in many Natural
-Language Processing applications such as Automatic Speech Recognition,
-Machine Translation, and Information Retrieval. Here, we study the
-problem under the standard formulation of learning to predict the
-upcoming token given its previous context.
-One successful approach to this problem relies on counting the number
-of occurrences of $n$-grams while using smoothing and back-off
-techniques to estimate the probability of an upcoming
-word~\cite{kneser1995improved}. However, since each individual word is
-treated independently of the others, $n$-gram models fail to capture
-semantic relations between words. In contrast, neural network language
-models~\cite{bengio2006neural} learn to predict the upcoming word
-given the previous context while embedding the vocabulary in a
-continuous space that can represent the similarity structure between
-words. Both feed-forward~\cite{schwenk2007continuous} and recurrent
-neural networks~\cite{mikolov2010recurrent} have been shown to
-outperform $n$-gram
-models~\cite{mikolov2010recurrent,le2011structured} in various setups.
-These two types of neural networks make different architectural
-decisions. Recurrent networks take one token at a time together with a
-hidden ``memory'' vector as input and produce a prediction and an
-updated hidden vector for the next time step. In contrast,
-feed-forward language models take as input the last $n$ tokens, where
-$n$ is a fixed window size, and use them jointly to predict the
-upcoming word. %Particularly, the model proposed by
+%Statistical language models are a crucial component in many Natural
+%Language Processing applications such as Automatic Speech Recognition,
+%Machine Translation, and Information Retrieval. Here, we study the
+%problem under the standard formulation of learning to predict the
+%upcoming token given its previous context.
+%One successful approach to this problem relies on counting the number
+%of occurrences of $n$-grams while using smoothing and back-off
+%techniques to estimate the probability of an upcoming
+%word~\cite{kneser1995improved}. However, since each individual word is
+%treated independently of the others, $n$-gram models fail to capture
+%semantic relations between words. In contrast, neural network language
+%models~\cite{bengio2006neural} learn to predict the upcoming word
+%given the previous context while embedding the vocabulary in a
+%continuous space that can represent the similarity structure between
+%words. Both feed-forward~\cite{schwenk2007continuous} and recurrent
+%neural networks~\cite{mikolov2010recurrent} have been shown to
+%outperform $n$-gram
+%models~\cite{mikolov2010recurrent,le2011structured} in various setups.
+%These two types of neural networks make different architectural
+%decisions. Recurrent networks take one token at a time together with a
+%hidden ``memory'' vector as input and produce a prediction and an
+%updated hidden vector for the next time step. In contrast,
+%feed-forward language models take as input the last $n$ tokens, where
+%$n$ is a fixed window size, and use them jointly to predict the
+%upcoming word. %Particularly, the model proposed by
 %\newcite{bengio2006neural} uses a concatenation of the word embeddings
 %corresponding to the input and then projects them into a hidden layer,
 %which can learn interactions between these words. Others have tried
@@ -59,20 +99,6 @@ upcoming word. %Particularly, the model proposed by
 %models~\cite{arisoy2012deep}, but this approach has given little
 %benefit.
 
-%Even though recurrent models hold today the state-of-the-art record,
-%feed-forward language models have appealing properties that are worth
-%further exploring. Specifically, since they receive as input a
-%sequence of $n$ tokens, they could potentially infer relations back
-%and forward \gbt{Why ``back and forward''?} \gk{It means that you can access words produced at any time (within the window)} between them more easily
-%than a recurrent network that has to squeeze all the information in
-%the previous context into the hidden layer, especially for long-range
-%dependencies. \gbt{Is it true that they are easier to train / can
-%  scale better? If so, say it. More generally, we need to improve the
-%  motivation: We say they can infer relations more easily, but RNNs
-%  still win. What is it that makes FFNNs a good option? In which
-%  setups is that a preferrable option over RNNs?} \gk{They are not. The point here is that perhaps we are ignoring an interesting path, and with this work we improve over this line, even if we don't make it attractive enough to be preferable to the other} Therefore, in this
-%study we decided to focus on studying how can we improve feed-forward
-%neural networks with a better encoding of these relations.
 
 %As an observation, the words in the context are often treated individually. While feed-forward models concatenate the word vectors into one single context vector which is the input of the subsequent hidden layers, the recurrent networks take into account one word per time step, and rely on powerful sequential models such as the Long-Short Term Memory~\cite{hochreiter1997long} to learn the temporal dependency for syntactic and grammar regularisation~\cite{zaremba2014recurrent}. On the other hand, the long context itself can be factorised into constituent $n$-grams, for example multi-word expressions. The global smoothing function can be enhanced if the networks can acquire such regional representation of the context. Our interest in this paper, therefore, will focus on feed-forward models with long context inputs. While extending the network with extra hidden layers have little benefit~\cite{arisoy2012deep} that even requires a discriminative pre-training process, we are interested in the use of temporal convolutional neural networks that are recently exploited in the field of Natural Language Processing. 
 
@@ -105,31 +131,31 @@ upcoming word. %Particularly, the model proposed by
 %tokens of all across the input window, even those that are the
 %farthest from the target.
 
-In the thesis, we define and explore the feed-forward neural network language models a
-ugmented with convolutional layers and compare them with original feed-forward and recurrent neural networks. Our
-results show a 13\% perplexity improvement of the CNN with respect to
-the feed-forward language model, while comparable or higher performance
-compared to similarly-sized recurrent models, and lower performance
-with respect to larger, state-of-the-art recurrent language
-models~(LSTMs as trained in~\newcite{zaremba2014recurrent}).
+%In the thesis, we define and explore the feed-forward neural network language models a
+%ugmented with convolutional layers and compare them with original feed-forward and recurrent neural networks. Our
+%results show a 13\% perplexity improvement of the CNN with respect to
+%the feed-forward language model, while comparable or higher performance
+%compared to similarly-sized recurrent models, and lower performance
+%with respect to larger, state-of-the-art recurrent language
+%models~(LSTMs as trained in~\newcite{zaremba2014recurrent}).
+%
+%Our second contribution is an analysis of the kind of information
+%learned by the CNN, showing that the network learns to extract a
+%combination of grammatical, semantic, and topical information from
+%tokens of all across the input window, even those that are the
+%farthest from the target.
+%
+%In brief, this thesis is organised as follows. Chapter~\ref{c:review} is 
+%dedicated to provide background knowledge about the motivation, architecture and
+%progress of neural language models by covering the details of the original
+%feed-forward and recurrent language models with most techniques applied in 
+%state-of-the-art systems. In chapter~\ref{c:cnn}, we describe the proposed
+%model with the addition of convolutional layers. Subsequently, details about the 
+%experiments will be delivered in Chapter~\ref{c:exp}. Finally, the model analysis in which we  will be presented in Chapter~\ref{c:analysis}.
 
-Our second contribution is an analysis of the kind of information
-learned by the CNN, showing that the network learns to extract a
-combination of grammatical, semantic, and topical information from
-tokens of all across the input window, even those that are the
-farthest from the target.
-
-In brief, this thesis is organised as follows. Chapter~\ref{c:review} is 
-dedicated to provide background knowledge about the motivation, architecture and
-progress of neural language models by covering the details of the original
-feed-forward and recurrent language models with most techniques applied in 
-state-of-the-art systems. In chapter~\ref{c:cnn}, we describe the proposed
-model with the addition of convolutional layers. Subsequently, details about the 
-experiments will be delivered in Chapter~\ref{c:exp}. Finally, the model analysis in which we  will be presented in Chapter~\ref{c:analysis}.
 
 
 
-%In this work, we investigate the feed-forward neural language models with temporal convolutional neural networks applied on the context embeddings. The concept of this structure has already been introduced~\cite{collobert2011natural}, in which the network is equipped with a convolutional-pooling mechanism to find the features for multiple natural language processing tasks including language modeling. However, it is unknown if the convolution networks deliver any improvement over the feed-forward counterpart. For that purpose, we initially train a carefully tuned feed-forward neural language model, which yield competitive performance in various corpora. Subsequently, we enhance the baseline with an additional convolutional layer that convolves over the word embeddings. The network is setup so that: the layers between two models are almost identical except the convolutional layers, and we can effortlessly limit the hyperparameter space for network training. The experimental results indicate that using convolutional layers can improve 15-20\% perplexity compared to the solid baseline, and the CNN model can perform on par with the state-of-the-art models. Our analysis also shows that the convolutional kernels independently learned to focus on different linguistic patterns, and the model can take into account context words at very far from the target. 
 
 %%% Local Variables:
 %%% mode: latex

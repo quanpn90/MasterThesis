@@ -1,3 +1,4 @@
+\section{Experiment details}
 We evaluate our model on two English corpora of different sizes and
 genres that have been used for language modeling evaluation
 before. The {\bf Penn Treebank} contains one million words of
@@ -152,3 +153,117 @@ classes based on word frequency.
 %~ As standard in language modeling, we report perplexity \gbt{brief
   %~ description, no need for formula.} (lower is better). 
 
+\section{Results}
+
+Our experimental results are summarized in Table~\ref{tab:result}. %From the baseline, we gradually add a convolutional layer (+CNN), then a Network-in-Network convolutional layer (+NIN) and finally we tried combining two convolutional blocks together (+COM). 
+
+\begin{table*}[t]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & $k$ & ker & \multicolumn{3}{c|}{Penn Treebank} & \multicolumn{3}{c|}{Europarl-NC} \\
+		& & &  val & test & \#p & val & test & \#p \\
+		
+		
+		\hline 
+		Vanilla FFNN      & 128 & -   & 156 & 147 & 4.5M        & - & - & -   \\
+		Baseline FFNN         & 128 & -   & 114 & 109 & 4.5M        & - & - & -   \\
+		+CNN              & 128 & 3   & 108 & 102 & 4.5M        & - & - &  -  \\
+		+MLPConv          & 128 & 3   & 102 &  97 & 4.5M        & - & - &  -  \\
+		+MLPConv+COM      & 128 & 3+5 & 96  &  {\bf 92} & 8M         & - & - & -    \\
+		+ML-CNN ($2$ layers) & 128 & 3   & 113 & 108 &  8M       & - & -  & -  \\
+		+ML-CNN ($4$ layers) & 128 & 3   & 130 & 124 &  8M       & - & -  & -   \\
+		
+		
+		\hline
+		Vanilla FFNN     & 256 & -   & 161 &  152  &  8.2M       & - & - & -   \\
+		Baseline FFNN        & 256 & -   & 110 &  105  & 8.2M        & 133 & 174 & 48M \\
+		+CNN             & 256 & 3   & 104 &  98   &  8.3M      & 112 & 133 & 48M \\
+		+MLPConv         & 256 & 3   & 97  &  93   &  8.3M      & 107 & {128} & 48M \\
+		+MLPConv+COM     & 256 & 3+5 & 95  &  \textbf{91} & 18M  & 108 & \textbf{128} & 83M \\
+		+MLPConv+COM     & 512 & 3+5 & 96  &  92 & 52M  & - & - & - \\
+		
+		
+		\hline
+		Model & hid & \#l & \multicolumn{3}{c|}{Penn Treebank} & \multicolumn{3}{c|}{Europarl-NC} \\
+		& & &  val & test & \#p & val & test & \#p \\
+		\hline 
+		RNN~\cite{mikolov2014learning}     & 300  & 1 & 133 & 129  & 6M & - & - & \\
+		LSTM~\cite{mikolov2014learning}    & 300  & 1 & 120 & 115  & 6.3M  & - & - & \\
+		LSTM~\cite{zaremba2014recurrent}   & 1500 & 2 & 82  & \textbf{78} & 48M  & - & - & \\
+		LSTM (trained in-house)            & 256  & 2 & 108 & 103  & 5.1M & 137 & 155 & 31M \\
+		LSTM (trained in-house)            & 512  & 1 & 123 & 118  & 12M & 133 & 149 & 62M\\
+		LSTM (trained in-house)            & 512  & 2 & 94  & 90   & 11M & 114 & \textbf{124}& 63M\\
+		RNN  (trained in-house)            & 512  & 2 & 129 & 121  & 10M & 152 & 173 & 61M\\
+		\hline
+	\end{tabular}
+	\caption{Results on Penn Treebank and Europarl-NC. Figure of merit is
+		perplexity (lower is better). Legend: $k$: embedding size;
+		\textit{ker}: kernel size; \textit{val}: results on validation
+		data; \textit{test}: results on test data; \textit{\#p}: number of
+		parameters; \textit{hid}: size of hidden layers; \textit{\#l}:
+		number of layers.}
+	\label{tab:result}
+\end{table*}
+%
+%\paragraph{Comparison with the baseline.} 
+First of all, we can see that even though the FFNN gives a very competitive performance, the addition of convolutional layers is clearly effective to increase it even further\footnote{In our experiments, increasing the number of fully connected layers is harmful. Two hidden layers with highway connections is the best setting we could find.}. 
+Concretely, we observe a solid 13\% reduction of perplexity compared to the feed-forward network after using Network-in-Network in all setups for both corpora.  CNN alone yields a 6\% improvement, while MLPConv, in line with our expectations, adds another 5\% reduction in perplexity. A final (smaller) improvement comes from combining kernels of size 3 and 5, which can be attributed to a more expressive model that can learn patterns of $n$-grams of different sizes.%, although this confounds with having a higher capacity model. However, in our experience, lager models did not necessarily perform better. CNNs with large embedding sizes often over-fitted even to the large Europarl-NC corpus. We still need further studies to determine whether these CNNs can be trained at tohse larger settings.
+In contrast to the successful two variants above, the multi-layer CNN
+did not help in better capturing the regularities of text, but rather the opposite:
+the more convolutional layers were stacked,
+the worse the performance. This also stands in contrast to the
+tradition of convolutional networks in Computer Vision, where using
+very deep convolutional neural networks is key to having better
+models. In text, deep convolution for text representation is rather
+rare, and has only been applied in sentence
+representation~\cite{Kalchbrenner2014conv}. We conjecture that the
+reason why deep CNNs may not be so effective for text could be the
+non-recursive nature of the textual data after convolution. In other
+words, the convolution output for an image can be construed to be a new
+image, which yet again can be subject to new convolution operations,
+whereas the textual counterpart may no longer have the same
+property. 
+% \newgbt{very good!}
+%As seen in Table~\ref{tab:result}, the performance becomes worse after we stack more convolutional layers. One possible reason is that, the context of language modeling is not a full sentence as in the work of~\cite{Kalchbrenner2014conv}, in which deep convolution can be interpreted as tree-based syntactic structure.
+
+%Importantly, we struggled to try our networks with a very large setting (the result is not shown). The computation at large embeddings becomes expensive, and more importantly, the models overfit even to Europarl-NC, making the improvement negligible. Either very large dropout needs to be used, or the limitation of the models has been reached, which can be answered when higher computational power is available and more investigation is done. 
+
+Regarding the comparison with a stronger LSTM, our models can perform competitively under the same embedding
+dimension. However, the LSTM can be easily scaled using larger models,
+as shown in~\newcite{zaremba2014recurrent}, which gives the best
+known results to date. This is not an option for our model which heavily overfits with large 
+hidden layers (around $1000$) even with very large dropout values. 
+
+% \newgbt{added following, pls check.}
+
+
+% \newgbt{I don't understand the following.}
+%~ Since the feed forward structure normally
+%~ requires a large hidden layer while the hidden layers of RNN models
+%~ are shared across time steps, we end up using $1.5$ times more
+%~ parameters than a LSTM/RNN with the same word embedding
+%~ size. Specifically, our models with $k=256$ and a single convolutional
+%~ block have approximately the same number of parameters as an LSTM
+%~ with $H=400$.
+%\newgbt{so? how does that affect the scaling of the model? why can't
+%we do the same as them?}
+
+% \gk{Don't think this discussion is adding anything to the message of the paper}
+%In terms of the number of parameters, one of the main weaknesses of FF networks is that they may consume a lot more weights than recurrent networks, whose hidden weights are shared across time steps. In general, a feed forward network needs a large hidden layer to perform on par with an RNN~\cite{devlin2014fast}. Also the FFNN also requires a large matrix computation at the first layer to map the large context into the hidden layer. Our feed-forward baseline has 1.5X more weights than a RNN and LSTM (with Zaremba's implementation it no longer needs 4X more weights than RNN~\cite{zaremba2014recurrent}). However, the convolutional layers only add about 1-5\% to the number of weights.
+
+%Condensed in one sentence above
+%\paragraph{Kernel size effect.}	In all of our experiments, we started out with the kernel size of $3$ and stride of $1$ as inspired by the VGG network~\cite{simonyan2014very}. We observed that kernels with size 5 perform similarly (with stride 1 as well). When we increase the kernel size to (7 or 9), it is observed that the performance decreases slightly. Reasonably, with very large kernels, two adjacent windows have very similar content words (only one word as difference). However, further exploration with larger strides are not useful as well. 
+
+% Already discussed in models, nothing related to the experimental results to be discuse=sed here.
+%\paragraph{Batch Normalisation effect.} Batch normalisation is applied after each convolutional layer (2 batch norm layers would be used in the case of NIN networks). The main effect of batch normalisation in our experiments is regularisation. Concretely, it offers the same effect as dropout. Interestingly, batch normalisation is used only on the convolutional part of the network, while the fully connected layers are equipped with dropout. We do not use other regularisation methods such as L2 penalty. 
+%\\
+
+%~ Maybe put this to conclusion ?
+To sum up, we have established that the results of our CNN model are
+well above those of simple feed forward networks and recurrent neural
+networks. While they are below state of the art LSTMs, they are able
+to perform competitively with them for small and moderate-size
+models. Scaling to larger sizes may be today the main roadblock 
+for CNNs to reach the same performances
+as large LSTMs in language modeling. % is\dots

@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{60}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -25,6 +25,13 @@ Yoshua Bengio, Holger Schwenk, Jean-S{\'e}bastien Sen{\'e}cal, Fr{\'e}deric
 \newblock Neural probabilistic language models.
 \newblock In \emph{Innovations in Machine Learning}, pages 137--186. Springer,
   2006.
+
+\bibitem[Bengio et~al.(2013)Bengio, Boulanger-Lewandowski, and
+  Pascanu]{bengio2013advances}
+Yoshua Bengio, Nicolas Boulanger-Lewandowski, and Razvan Pascanu.
+\newblock Advances in optimizing recurrent networks.
+\newblock In \emph{2013 IEEE International Conference on Acoustics, Speech and
+  Signal Processing}, pages 8624--8628. IEEE, 2013.
 
 \bibitem[Bojar et~al.(2015)Bojar, Chatterjee, Federmann, Haddow, Huck, Hokamp,
   Koehn, Logacheva, Monz, Negri, Post, Scarton, Specia, and
@@ -57,6 +64,14 @@ Stanley~F Chen and Joshua Goodman.
 \newblock An empirical study of smoothing techniques for language modeling.
 \newblock \emph{Computer Speech \& Language}, 13\penalty0 (4):\penalty0
   359--394, 1999.
+
+\bibitem[Cho et~al.(2014)Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau,
+  Bougares, Schwenk, and Bengio]{cho2014learning}
+Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
+  Fethi Bougares, Holger Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock \emph{arXiv preprint arXiv:1406.1078}, 2014.
 
 \bibitem[Collobert et~al.(2011)Collobert, Weston, Bottou, Karlen, Kavukcuoglu,
   and Kuksa]{collobert2011natural}
@@ -92,6 +107,19 @@ Denis Filimonov and Mary Harper.
 \newblock In \emph{Proceedings of the 2009 Conference on Empirical Methods in
   Natural Language Processing: Volume 3-Volume 3}, pages 1114--1123.
   Association for Computational Linguistics, 2009.
+
+\bibitem[Fukushima(1980)]{fukushima1980neocognitron}
+Kunihiko Fukushima.
+\newblock Neocognitron: A self-organizing neural network model for a mechanism
+  of pattern recognition unaffected by shift in position.
+\newblock \emph{Biological cybernetics}, 36\penalty0 (4):\penalty0 193--202,
+  1980.
+
+\bibitem[Graves and Schmidhuber(2005)]{graves2005framewise}
+Alex Graves and J{\"u}rgen Schmidhuber.
+\newblock Framewise phoneme classification with bidirectional lstm and other
+  neural network architectures.
+\newblock \emph{Neural Networks}, 18\penalty0 (5):\penalty0 602--610, 2005.
 
 \bibitem[Gu et~al.(2015)Gu, Wang, Kuen, Ma, Shahroudy, Shuai, Liu, Wang, and
   Wang]{Gu:etal:2015}
@@ -250,12 +278,6 @@ Tomas Mikolov, Armand Joulin, Sumit Chopra, Michael Mathieu, and Marc'Aurelio
 \newblock Learning longer memory in recurrent neural networks.
 \newblock \emph{arXiv preprint arXiv:1412.7753}, 2014.
 
-\bibitem[Miller and Charles(1991)]{miller1991contextual}
-George~A Miller and Walter~G Charles.
-\newblock Contextual correlates of semantic similarity.
-\newblock \emph{Language and cognitive processes}, 6\penalty0 (1):\penalty0
-  1--28, 1991.
-
 \bibitem[Ney et~al.(1994)Ney, Essen, and Kneser]{ney1994structuring}
 Hermann Ney, Ute Essen, and Reinhard Kneser.
 \newblock On structuring probabilistic dependences in stochastic language
@@ -275,21 +297,6 @@ Thomas~R Niesler and Philip~C Woodland.
   Conference Proceedings., 1996 IEEE International Conference on}, volume~1,
   pages 164--167. IEEE, 1996.
 
-\bibitem[Paccanaro and Hinton(2001)]{paccanaro2001learning}
-Alberto Paccanaro and Geoffrey~E. Hinton.
-\newblock Learning distributed representations of concepts using linear
-  relational embedding.
-\newblock \emph{IEEE Transactions on Knowledge and Data Engineering},
-  13\penalty0 (2):\penalty0 232--244, 2001.
-
-\bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and
-  Zhu]{papineni2002bleu}
-Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
-\newblock Bleu: a method for automatic evaluation of machine translation.
-\newblock In \emph{Proceedings of the 40th annual meeting on association for
-  computational linguistics}, pages 311--318. Association for Computational
-  Linguistics, 2002.
-
 \bibitem[Pascanu et~al.(2013)Pascanu, Mikolov, and
   Bengio]{pascanu2013difficulty}
 Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.
@@ -308,17 +315,26 @@ David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
 \newblock Learning internal representations by error propagation.
 \newblock Technical report, DTIC Document, 1985.
 
-\bibitem[Schmidhuber and Heil(1996)]{schmidhuber1996sequential}
-J{\"u}rgen Schmidhuber and Stefan Heil.
-\newblock Sequential neural text compression.
-\newblock \emph{IEEE Transactions on Neural Networks}, 7\penalty0 (1):\penalty0
-  142--146, 1996.
+\bibitem[Sag et~al.(2002)Sag, Baldwin, Bond, Copestake, and
+  Flickinger]{sag2002multiword}
+Ivan~A Sag, Timothy Baldwin, Francis Bond, Ann Copestake, and Dan Flickinger.
+\newblock Multiword expressions: A pain in the neck for nlp.
+\newblock In \emph{International Conference on Intelligent Text Processing and
+  Computational Linguistics}, pages 1--15. Springer, 2002.
 
 \bibitem[Schwenk(2007)]{schwenk2007continuous}
 Holger Schwenk.
 \newblock Continuous space language models.
 \newblock \emph{Computer Speech \& Language}, 21\penalty0 (3):\penalty0
   492--518, 2007.
+
+\bibitem[Serre et~al.(2007)Serre, Wolf, Bileschi, Riesenhuber, and
+  Poggio]{serre2007robust}
+Thomas Serre, Lior Wolf, Stanley Bileschi, Maximilian Riesenhuber, and Tomaso
+  Poggio.
+\newblock Robust object recognition with cortex-like mechanisms.
+\newblock \emph{IEEE transactions on pattern analysis and machine
+  intelligence}, 29\penalty0 (3):\penalty0 411--426, 2007.
 
 \bibitem[Shen et~al.(2014)Shen, He, Gao, Deng, and Mesnil]{shen2014latent}
 Yelong Shen, Xiaodong He, Jianfeng Gao, Li~Deng, and Gr{\'e}goire Mesnil.
@@ -347,6 +363,13 @@ Sainbayar Sukhbaatar, Jason Weston, Rob Fergus, et~al.
 \newblock In \emph{Advances in Neural Information Processing Systems}, pages
   2431--2439, 2015.
 
+\bibitem[Sutskever et~al.(2014)Sutskever, Vinyals, and
+  Le]{sutskever2014sequence}
+Ilya Sutskever, Oriol Vinyals, and Quoc~V Le.
+\newblock Sequence to sequence learning with neural networks.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  3104--3112, 2014.
+
 \bibitem[Tieleman and Hinton(2012)]{tieleman2012lecture}
 Tijmen Tieleman and Geoffrey Hinton.
 \newblock Lecture 6.5-rmsprop: Divide the gradient by a running average of its
@@ -354,12 +377,32 @@ Tijmen Tieleman and Geoffrey Hinton.
 \newblock \emph{COURSERA: Neural Networks for Machine Learning}, 4\penalty0
   (2), 2012.
 
+\bibitem[Vaswani et~al.(2013)Vaswani, Zhao, Fossum, and
+  Chiang]{vaswani2013decoding}
+Ashish Vaswani, Yinggong Zhao, Victoria Fossum, and David Chiang.
+\newblock Decoding with large-scale neural language models improves
+  translation.
+\newblock In \emph{EMNLP}, pages 1387--1392. Citeseer, 2013.
+
+\bibitem[Waibel et~al.(1989)Waibel, Hanazawa, Hinton, Shikano, and
+  Lang]{waibel1989phoneme}
+Alexander Waibel, Toshiyuki Hanazawa, Geoffrey Hinton, Kiyohiro Shikano, and
+  Kevin~J Lang.
+\newblock Phoneme recognition using time-delay neural networks.
+\newblock \emph{Acoustics, Speech and Signal Processing, IEEE Transactions on},
+  37\penalty0 (3):\penalty0 328--339, 1989.
+
 \bibitem[Witten and Bell(1991)]{witten1991zero}
 Ian~H Witten and Timothy~C Bell.
 \newblock The zero-frequency problem: Estimating the probabilities of novel
   events in adaptive text compression.
 \newblock \emph{Ieee transactions on information theory}, 37\penalty0
   (4):\penalty0 1085--1094, 1991.
+
+\bibitem[Zaremba(2015)]{zaremba2015empirical}
+Wojciech Zaremba.
+\newblock An empirical exploration of recurrent network architectures.
+\newblock 2015.
 
 \bibitem[Zaremba et~al.(2014)Zaremba, Sutskever, and
   Vinyals]{zaremba2014recurrent}

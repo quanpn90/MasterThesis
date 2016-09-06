@@ -1,61 +1,3 @@
-\section{Related works}
-
-Convolutional Neural Networks (CNNs) were originally designed to deal
-with hierarchical representation in Computer
-Vision~\cite{lecun1995convolutional}. Deep convolutional networks have
-been successfully applied in image classification and
-understanding~\cite{karen2014vgg,kaiming2015resnet}. In such systems
-the convolutional kernels learn to detect visual features at both
-local and more abstract levels.
-
-In NLP, CNNs have been mainly applied to static classification task 
-for discovering latent structures in text. \newcite{kim2014sentence} use a
-CNN to tackle sentence classification, with competitive results. This
-work also introduces kernels with varying window sizes to learn
-complementary features at different aggregation
-levels. \newcite{Kalchbrenner2014conv} propose a convolutional
-architecture for sentence representation that vertically stacks
-multiple convolution layers, each of which can learn independent
-convolution kernels. CNNs with similar structures have also been
-applied to other classification tasks, such as semantic
-matching~\cite{hu2014convolutional},
-%\gbt{what is semantic matching? we call it sentence matching in the intro}
-relation extraction~\cite{nguyen2015relation} and information
-retrieval~\cite{shen2014latent}.  In
-contrast,~\newcite{collobert2011natural} explore a CNN architecture to
-solve various sequential and non-sequential NLP tasks such as
-part-of-speech tagging, named entity recognition and also language
-modeling. This is perhaps the work that is closest to ours in the
-existing literature. However, their model differs from ours in that it
-uses a max-pooling layer that picks the most activated feature across
-time, thus ignoring temporal information, whereas we explicitly avoid
-doing so. More importantly, the language models trained in this work are only
-evaluated through downstream tasks and through the quality of the
-learned word embeddings, but not on the sequence prediction task
-itself.
-
-In this work we focus on statistical language modeling, which differs
-from most of the tasks where CNNs have been applied before in multiple ways. First,
-the input normally consists of incomplete sequences of words rather
-than complete sentences. Second, as a classification problem, it
-features an extremely large number of classes (the words in a large
-vocabulary). Finally, temporal information, which can be safely
-discarded in many settings with little impact in performance, is
-critical here: An $n$-gram appearing close to the predicted word may
-be more informative, or yield different information, than the same
-$n$-gram appearing several tokens earlier.
-%A crucial difference between the aforementioned problems and language modeling is that 
-%the context in each language modeling sample is normally not a full sentence. This property, together with temporal dependencies, makes 
-%language modeling the more difficult task. 
-
-%~ CNNs have also been applied directly on one-hot word vectors rather
-%~ than word embeddings~\cite{johnson2015semi,johnson2015semi} in order
-%~ to reduce the number of free parameters or over character
-%~ embeddings~\cite{zhang2015text,yoon2015character}.
-%In~\cite{zhang2015text}, the CNNs can operate on top of character sequences for classification. With the same approach,~\cite{yoon2015character} use time-delayed networks for word representation based on characters for better morphological discrimination. 
-
-%The traits of our work are similar with Tag prediction from Twitter~\cite{weston2014tagspace}{\bf How?}. Besides, the memory network~\cite{sukhbaatar2015end} also shared some mechanical similarity with the convolutional networks, in which the context is scanned by the model multiple times for prediction{\bf Is this relevant?}. In~\cite{wang2015gen}, the author proposed a convolutional structure that can process contexts at any size, but the comparison between their model and the recurrent network is unclear, as well as their result is outperformed by our solid feed-forward baseline{\bf How does their model differ from ours?}.
-
 
 
 
@@ -119,7 +61,7 @@ Finally, a softmax layer computes the model prediction for the upcoming word. We
 
 ~ \begin{figure}[!t]
 ~ \centering
-~ \includegraphics[width=\columnwidth]{figures/baseline.pdf}
+~ \includegraphics[width=\columnwidth/2]{figures/baseline.pdf}
 ~ \caption{Overview of baseline FFLM.}  
 ~ \label{fig:baseline}
 ~ \end{figure}
@@ -241,14 +183,15 @@ Finally, we consider combining features learned through different kernel sizes (
 
 
 ~ \begin{figure}[!t]
-~ \includegraphics[width=\columnwidth]{figures/convolution.pdf}
-~ \caption{Convolutional layer on top of the context matrix.}  
+	\centering
+~ \includegraphics[width=\columnwidth*3/4]{figures/convolution.pdf}
+~ \caption{Convolutional	 layer on top of the context matrix.}  
 ~ \label{fig:simpleconv}
 ~ \end{figure}
 %
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\columnwidth]{figures/combine.pdf}
+\includegraphics[width=\columnwidth*3/4]{figures/combine.pdf}
 \caption{Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}  
 \label{fig:combine}
 \end{figure}

@@ -1,5 +1,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces An example of perplexity computation for the sentence ``The relationship between Obama and Netanyahu is not exactly friendly''.}}{6}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Notations for neural network layers.}}{12}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Notations for recurrent neural network layers.}}{19}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Results on Penn Treebank and Europarl-NC. Figure of merit is perplexity (lower is better). Legend: $k$: embedding size; \textit {ker}: kernel size; \textit {val}: results on validation data; \textit {test}: results on test data; \textit {\#p}: number of parameters; \textit {hid}: size of hidden layers; \textit {\#l}: number of layers.}}{37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
