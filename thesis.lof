@@ -1,17 +1,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Neural Language Model by Bengio et al\nobreakspace {}\cite {bengio2003neural}.}}{11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace {}\cite {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Simple illustration for convolution. The input is a 2D image, the output is obtained by sliding the kernel through the image.}}{27}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace {}\cite {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{19}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Simple illustration for convolution. The input is a 2D image, the output is obtained by sliding the kernel through the image.}}{28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{31}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{33}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{33}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{33}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{35}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{38}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{39}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{41}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{42}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{44}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

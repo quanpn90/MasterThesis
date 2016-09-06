@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.12)  6 SEP 2016 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.12)  7 SEP 2016 01:16
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1427,91 +1427,90 @@ Overfull \hbox (9.12012pt too wide) in paragraph at lines 124--126
  []    [] 
  []
 
-[11 <./figures/neuralLM.pdf>] [12] [13] [14] [15] [16] [17]
+[11 <./figures/neuralLM.pdf>] [12] [13] [14] [15] [16]
+Overfull \hbox (3.67767pt too wide) in paragraph at lines 347--348
+[]\OT1/ptm/m/n/12 For neu-ral net-work lan-guage mod-els, the main meth-ods use
+d to pre-vent this phe-nomenon
+ []
+
+[17] [18]
 
 pdfTeX warning: pdflatex.exe (file ./figures/rnn.pdf): PDF inclusion: found PDF
  version <1.7>, but at most version <1.5> allowed
-<figures/rnn.pdf, id=112, 794.97pt x 614.295pt>
+<figures/rnn.pdf, id=115, 794.97pt x 614.295pt>
 File: figures/rnn.pdf Graphic file (type pdf)
  <use figures/rnn.pdf>
-Package pdftex.def Info: figures/rnn.pdf used on input line 402.
+Package pdftex.def Info: figures/rnn.pdf used on input line 412.
 (pdftex.def)             Requested size: 433.62pt x 335.07939pt.
 
-Overfull \hbox (9.12012pt too wide) in paragraph at lines 401--403
+Overfull \hbox (9.12012pt too wide) in paragraph at lines 411--413
  []    [] 
  []
 
-[18] [19] [20 <./figures/rnn.pdf>] [21]
-Overfull \hbox (0.5935pt too wide) in paragraph at lines 494--495
+[19 <./figures/rnn.pdf>] [20] [21] [22]
+Overfull \hbox (0.5935pt too wide) in paragraph at lines 504--505
 []\OT1/ptm/m/n/12 The deriva-tives of the ac-ti-va-tion func-tion has al-ready 
 been pro-vided for the feed-forward
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 502.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 529.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 512.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 539.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [22] [23]
-[24] [25] <figures/conv_ops.pdf, id=149, 427.5975pt x 327.2225pt>
+) [23] [24]
+[25] [26] <figures/conv_ops.pdf, id=152, 427.5975pt x 327.2225pt>
 File: figures/conv_ops.pdf Graphic file (type pdf)
 
 <use figures/conv_ops.pdf>
-Package pdftex.def Info: figures/conv_ops.pdf used on input line 606.
+Package pdftex.def Info: figures/conv_ops.pdf used on input line 619.
 (pdftex.def)             Requested size: 216.81pt x 165.91261pt.
- [26] [27 <./figures/conv_ops.pdf>] [28]) [29]
+ [27] [28 <./figures/conv_ops.pdf>] [29]) [30]
 Chapter 3.
-(3-model.tex
+(3-model.tex [31
 
-LaTeX Warning: Reference `sect:exp' on page 30 undefined on input line 35.
-
-[30
-
-] <figures/baseline.pdf, id=235, 613.29124pt x 573.14125pt>
+] [32]
+<figures/baseline.pdf, id=241, 613.29124pt x 573.14125pt>
 File: figures/baseline.pdf Graphic file (type pdf)
 
 <use figures/baseline.pdf>
-Package pdftex.def Info: figures/baseline.pdf used on input line 64.
+Package pdftex.def Info: figures/baseline.pdf used on input line 77.
 (pdftex.def)             Requested size: 216.81pt x 202.61388pt.
- [31 <./figures/baseline.pdf>]
+ [33 <./figures/baseline.pdf>]
 
-LaTeX Warning: Reference `sect:exp' on page 32 undefined on input line 175.
+LaTeX Warning: Reference `sect:exp' on page 34 undefined on input line 188.
 
-<figures/convolution.pdf, id=249, 725.71124pt x 459.7175pt>
+[34] <figures/convolution.pdf, id=258, 725.71124pt x 459.7175pt>
 File: figures/convolution.pdf Graphic file (type pdf)
 
 <use figures/convolution.pdf>
-Package pdftex.def Info: figures/convolution.pdf used on input line 187.
+Package pdftex.def Info: figures/convolution.pdf used on input line 200.
 (pdftex.def)             Requested size: 325.215pt x 206.01517pt.
 
-<figures/combine.pdf, id=250, 661.47125pt x 471.7625pt>
+<figures/combine.pdf, id=259, 661.47125pt x 471.7625pt>
 File: figures/combine.pdf Graphic file (type pdf)
 
 <use figures/combine.pdf>
-Package pdftex.def Info: figures/combine.pdf used on input line 194.
+Package pdftex.def Info: figures/combine.pdf used on input line 207.
 (pdftex.def)             Requested size: 325.215pt x 231.94308pt.
-) [32] [33 <./figures/convolution.pdf> <./figures/combine.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/combine.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->]
+) [35 <./figures/convolution.pdf>] [36 <./figures/combine.pdf>]
 Chapter 4.
 (4-exp.tex
 
-LaTeX Warning: Reference `sect:ana' on page 34 undefined on input line 42.
+LaTeX Warning: Reference `sect:ana' on page 37 undefined on input line 42.
 
-[34
+[37
 
-] [35]) [36] [37]
+] [38]) [39] [40]
 Chapter 5.
-(5-analysis.tex <figures/kernels.pdf, id=293, 796.9775pt x 298.11375pt>
+(5-analysis.tex <figures/kernels.pdf, id=303, 796.9775pt x 298.11375pt>
 File: figures/kernels.pdf Graphic file (type pdf)
 
 <use figures/kernels.pdf>
 Package pdftex.def Info: figures/kernels.pdf used on input line 4.
 (pdftex.def)             Requested size: 433.62pt x 162.19812pt.
- [38
+ [41
 
  <./figures/kernels.pdf>]
 Package epstopdf Info: Source file: <figures/weight_dist.eps>
@@ -1525,14 +1524,14 @@ verted-to.pdf figures/weight_dist.eps>
 (epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/weight_dist-eps-converted-to.pdf, id=307, 361.35pt x 252.945pt>
+<figures/weight_dist-eps-converted-to.pdf, id=318, 361.35pt x 252.945pt>
 File: figures/weight_dist-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/weight_dist-eps-converted-to.pdf>
 Package pdftex.def Info: figures/weight_dist-eps-converted-to.pdf used on input
  line 95.
 (pdftex.def)             Requested size: 433.62pt x 303.53633pt.
- [39 <./figures/weight_dist-eps-converted-to.pdf>]
+ [42 <./figures/weight_dist-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/ppl_positions.eps>
 (epstopdf)                    date: 2016-07-13 02:01:30
 (epstopdf)                    size: 22930 bytes
@@ -1545,28 +1544,34 @@ onverted-to.pdf figures/ppl_positions.eps>
 (epstopdf)             \includegraphics on input line 147.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/ppl_positions-eps-converted-to.pdf, id=317, 361.35pt x 252.945pt>
+<figures/ppl_positions-eps-converted-to.pdf, id=328, 361.35pt x 252.945pt>
 File: figures/ppl_positions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/ppl_positions-eps-converted-to.pdf>
 Package pdftex.def Info: figures/ppl_positions-eps-converted-to.pdf used on inp
 ut line 147.
 (pdftex.def)             Requested size: 433.62pt x 303.53633pt.
- [40]) [41 <./figures/ppl_positions-eps-converted-to.pdf>]
+ [43]) [44 <./figures/ppl_positions-eps-converted-to.pdf>]
 Chapter 6.
-(6-related.tex) [42
+(6-related.tex) [45
 
-] [43]
+] [46]
 Chapter 7.
-(6-conclusion.tex [44
+(6-conclusion.tex [47
 
-]) [45]
+]) [48]
 Appendix A.
-(appendix.tex) (thesis.bbl [46
+(appendix.tex) (thesis.bbl [49
 
-] [47
+] [50
 
-] [48] [49] [50] [51] [52]) [53] (thesis.aux)
+] [51] [52] [53] [54]
+Underfull \hbox (badness 1062) in paragraph at lines 316--322
+[]\OT1/ptm/m/n/12 Vu Pham, Th[]eodore Bluche, Christo-pher Ker-mor-vant, and J[
+]er[]ome Louradour.
+ []
+
+[55] [56]) [57] (thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1579,10 +1584,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30415 strings out of 493334
- 638560 string characters out of 3136651
- 969699 words of memory out of 3000000
- 33338 multiletter control sequences out of 15000+200000
+ 30428 strings out of 493334
+ 638871 string characters out of 3136651
+ 970026 words of memory out of 3000000
+ 33351 multiletter control sequences out of 15000+200000
  39103 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,73p,10396b,3301s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1601,9 +1606,9 @@ MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on thesis.pdf (61 pages, 768548 bytes).
+Output written on thesis.pdf (65 pages, 777522 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
+ 429 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

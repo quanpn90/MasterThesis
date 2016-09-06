@@ -1,10 +1,20 @@
+The convolutional neural network have been successfully applied in Computer Vision~\cite{krizhevsky2012imagenet,kaiming2015resnet,szegedy2015going} and Speech Recognition~\cite{graves2005framewise,abdel2012applying}. The main idea of applying CNNs into those problems is to
+extract features related to short-time lags~\cite{hochreiter1997long} - the arrangement of input units in a local area. For example, the CNNs are effective at extracting edges and tiny patterns in vision, or sequences of phonemes in speech signals.
+%
 
 
+A prominent work of applying CNNs in NLP is from~\newcite{collobert2011natural} who propose a neural network model with a convolutional layer in order to extract $n$-gram features for multiple NLP tasks including language modeling and part-of-speech tagging, chunking, named entity recognition. The network resembles the feed-forward neural language model~\cite{bengio2003neural},
+which includes the first layer that learns the continuous word representation and subsequent hidden layers. The main difference is that~\newcite{collobert2011natural} employ a convolutional layer (referred in the original work as Time-delayed neural network). Unfortunately, due to the computational limitations, the authors could not train the network by minimising the perplexity of the training data, but instead using a ranking-based loss function and focused on training the word embeddings. 
+%
+As mentioned before, the main purpose of the thesis is to investigate in the comparison between the standard feed-forward neural network and the convolutional neural network language model. 
+Our CNN is constructed by extending a feed-forward language model (FFLM) with convolutional layers. In what follows, we first explain the implementation of the base FFLM and next, we describe the CNN that we study.
+%
+%
 
 
 \section{Base FFLM}
 
-Our CNN is constructed by extending a feed-forward language model (FFLM) with convolutional layers. In what follows, we first explain the implementation of the base FFLM and next, we describe the CNN that we study.
+
 
 %~ Our baseline feed-forward language model (FFLM) is based on that of
 %~ \newcite{bengio2006neural}, with a few modifications that much improve
@@ -17,22 +27,25 @@ Our CNN is constructed by extending a feed-forward language model (FFLM) with co
 %~ used~\cite{srivastava2015highway}. 
 
 Our baseline feed-forward language model (FFLM) is almost identical to the original model proposed by  ~\newcite{bengio2006neural}, with only slight changes to push its performance as high as we can, producing a very strong baseline. In particular, we extend it with highway layers and use Dropout as regularization. The model is illustrated in Figure~\ref{fig:baseline} and works as follows. First, each word in the input $n$-gram is mapped to a low-dimensional vector (viz. embedding) though a shared lookup table. Next, these word vectors are concatenated and fed to a highway layer ~\cite{srivastava2015highway}.
-%The mechanism of highway layers is we can combine the non-linear affine transformation of an input layer with itself to create the output hidden layer. 
-%Assuming the input and output of the highway layer is $H_I$ and $H_O$. The materials for a highway layer is a typical non-linear transformation $H$ and a transform gate $T$
-%\begin{equation}
-%\begin{aligned}
-%H = f(H_I . W_h + b_h) \\
-%T = (H_I . W_t + b_t)
-%\end{aligned}  
-%\end{equation}
-%$W_h, b_h$ and $W_t, b_t$ are linear connected weights for the model, $f$ is a nonlinear function (ReLU in our work). Notably, the highway layer requires double the weights than a typical linear connected layer.
-%The output of the highway layer is the combination of the transformed input and a part of the input carried away to the output. 
-%\begin{equation}
-% H_O = H \ast T + H_I \ast (1 - T)
-%\end{equation}
+
+\paragraph{Highway layer} Highway layer is a variance of the conventional fully-connected layer. The mechanism of highway layers is to can combine the non-linear affine transformation of an input layer with itself to create the output hidden layer. 
+Assuming the input and output of the highway layer is $H_I$ and $H_O$. The materials for a highway layer is a typical non-linear transformation $H$ and a transform gate $T$
+\begin{equation}
+\begin{aligned}
+H = f(H_I . W_h + b_h) \\
+T = (H_I . W_t + b_t)
+\end{aligned}  
+\end{equation}
+$W_h, b_h$ and $W_t, b_t$ are linear connected weights for the model, $f$ is a nonlinear function (ReLU in our work). Notably, the highway layer requires double the weights than a typical linear connected layer.
+The output of the highway layer is the combination of the transformed input and a part of the input carried away to the output. 
+\begin{equation}
+ H_O = H \ast T + H_I \ast (1 - T)
+\end{equation}
 Succinctly, highway layers improve the gradient flow of the network by computing as output a convex combination between its input (called the \emph{carry}) and a traditional non-linear transformation of it (called the \emph{transform}).
 As a result, if there is a neuron whose gradient cannot flow through the transform component (e.g., because the activation is zero), it can still receive the back-propagation update signal through the carry gate.  %While deep feed-forward neural networks have not been shown to yield an important comparative advantage with respect to more shallow models~\cite{arisoy2012deep} ,
- We empirically observed the usage of a single highway layer to improve importantly the performance of the model. Even though a systematic evaluation for this model is beyond the scope of the current paper, our empirical results demonstrate that it is a very competitive one (see Section \ref{sect:exp}).    
+ We empirically observed the usage of a single highway layer to improve importantly the performance of the model. Even though a systematic evaluation for this model is beyond the scope of the current paper, our empirical results demonstrate that it is a very competitive one (see  Chapter~\ref{c:exp}).    
+ 
+Another important technique that we applied in our model is~\textbf{Dropout}. Dropout~\cite{hinton2012dropout} is a technique used to prevent overfitting 
 
 %~ fed to a fully-connected layer to produce a hidden layer 
 %~ works as follows

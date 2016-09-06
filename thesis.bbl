@@ -1,9 +1,17 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{64}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdel-Hamid et~al.(2012)Abdel-Hamid, Mohamed, Jiang, and
+  Penn]{abdel2012applying}
+Ossama Abdel-Hamid, Abdel-rahman Mohamed, Hui Jiang, and Gerald Penn.
+\newblock Applying convolutional neural networks concepts to hybrid nn-hmm
+  model for speech recognition.
+\newblock In \emph{2012 IEEE international conference on Acoustics, speech and
+  signal processing (ICASSP)}, pages 4277--4280. IEEE, 2012.
 
 \bibitem[Bengio et~al.(1994)Bengio, Simard, and Frasconi]{bengio1994learning}
 Yoshua Bengio, Patrice Simard, and Paolo Frasconi.
@@ -303,6 +311,15 @@ Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.
 \newblock On the difficulty of training recurrent neural networks.
 \newblock \emph{ICML (3)}, 28:\penalty0 1310--1318, 2013.
 
+\bibitem[Pham et~al.(2014)Pham, Bluche, Kermorvant, and
+  Louradour]{pham2014dropout}
+Vu~Pham, Th{\'e}odore Bluche, Christopher Kermorvant, and J{\'e}r{\^o}me
+  Louradour.
+\newblock Dropout improves recurrent neural networks for handwriting
+  recognition.
+\newblock In \emph{Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+  International Conference on}, pages 285--290. IEEE, 2014.
+
 \bibitem[Rosenfeld(2000)]{Rosenfeld:2000}
 Ronald Rosenfeld.
 \newblock Two decades of statistical language modeling: Where do we go from
@@ -349,6 +366,14 @@ Karen Simonyan and Andrew Zisserman.
 \newblock Very deep convolutional networks for large-scale image recognition.
 \newblock \emph{arXiv preprint arXiv:1409.1556}, 2014.
 
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov]{srivastava2014dropout}
+Nitish Srivastava, Geoffrey~E Hinton, Alex Krizhevsky, Ilya Sutskever, and
+  Ruslan Salakhutdinov.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock \emph{Journal of Machine Learning Research}, 15\penalty0
+  (1):\penalty0 1929--1958, 2014.
+
 \bibitem[Srivastava et~al.(2015)Srivastava, Greff, and
   Schmidhuber]{srivastava2015highway}
 Rupesh~Kumar Srivastava, Klaus Greff, and J{\"{u}}rgen Schmidhuber.
@@ -369,6 +394,14 @@ Ilya Sutskever, Oriol Vinyals, and Quoc~V Le.
 \newblock Sequence to sequence learning with neural networks.
 \newblock In \emph{Advances in neural information processing systems}, pages
   3104--3112, 2014.
+
+\bibitem[Szegedy et~al.(2015)Szegedy, Liu, Jia, Sermanet, Reed, Anguelov,
+  Erhan, Vanhoucke, and Rabinovich]{szegedy2015going}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
+  Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich.
+\newblock Going deeper with convolutions.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 1--9, 2015.
 
 \bibitem[Tieleman and Hinton(2012)]{tieleman2012lecture}
 Tijmen Tieleman and Geoffrey Hinton.

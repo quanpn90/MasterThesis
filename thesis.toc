@@ -17,31 +17,33 @@
 \contentsline {paragraph}{Hidden layers}{15}
 \contentsline {paragraph}{Input Layer}{15}
 \contentsline {paragraph}{Parameter Update}{16}
+\contentsline {paragraph}{Methods to prevent overfitting}{17}
 \contentsline {subsection}{\numberline {2.2.4}Recurrent neural language models}{17}
-\contentsline {paragraph}{Recurrent Neural Networks}{17}
-\contentsline {paragraph}{Recurrent Language Models}{18}
-\contentsline {subsubsection}{\numberline {2.2.4.1}Training Recurrent Networks}{20}
+\contentsline {paragraph}{Recurrent Neural Networks}{18}
+\contentsline {paragraph}{Recurrent Language Models}{19}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Training Recurrent Networks}{21}
 \contentsline {paragraph}{At each time step}{21}
-\contentsline {paragraph}{Back-propagation through time}{22}
-\contentsline {paragraph}{Problems with BPTT}{22}
-\contentsline {paragraph}{Dealing with gradient vanishing}{23}
-\contentsline {paragraph}{LSTM Structure}{24}
-\contentsline {paragraph}{Training LSTM}{25}
-\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{25}
-\contentsline {subsection}{\numberline {2.3.1}The convolutional layer}{26}
-\contentsline {paragraph}{Forward propagation}{26}
-\contentsline {paragraph}{Backward propagation}{27}
-\contentsline {subsection}{\numberline {2.3.2}Hyper parameters for Convolutional Neural Network}{28}
-\contentsline {subsection}{\numberline {2.3.3}Convolution neural networks for NLP}{29}
-\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{30}
-\contentsline {section}{\numberline {3.1}Base FFLM}{30}
-\contentsline {section}{\numberline {3.2}CNN and variants}{31}
-\contentsline {chapter}{\numberline {4}Experiments}{34}
-\contentsline {section}{\numberline {4.1}Experiment details}{34}
-\contentsline {section}{\numberline {4.2}Results}{35}
-\contentsline {chapter}{\numberline {5}Model Analysis}{38}
-\contentsline {paragraph}{Learned patterns}{38}
-\contentsline {paragraph}{Temporal information}{40}
-\contentsline {chapter}{\numberline {6}Related Works}{42}
-\contentsline {chapter}{\numberline {7}Conclusion}{44}
-\contentsline {chapter}{\numberline {A}Publications by Author}{46}
+\contentsline {paragraph}{Back-propagation through time}{23}
+\contentsline {paragraph}{Problems with BPTT}{24}
+\contentsline {paragraph}{Dealing with gradient vanishing}{24}
+\contentsline {paragraph}{LSTM Structure}{25}
+\contentsline {paragraph}{Multi-layer recurrent neural network}{26}
+\contentsline {paragraph}{Regularisation in RNN}{26}
+\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{27}
+\contentsline {subsection}{\numberline {2.3.1}The convolutional layer}{27}
+\contentsline {paragraph}{Forward propagation}{28}
+\contentsline {paragraph}{Backward propagation}{29}
+\contentsline {subsection}{\numberline {2.3.2}Hyper parameters for Convolutional Neural Network}{29}
+\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{31}
+\contentsline {section}{\numberline {3.1}Base FFLM}{32}
+\contentsline {paragraph}{Highway layer}{32}
+\contentsline {section}{\numberline {3.2}CNN and variants}{33}
+\contentsline {chapter}{\numberline {4}Experiments}{37}
+\contentsline {section}{\numberline {4.1}Experiment details}{37}
+\contentsline {section}{\numberline {4.2}Results}{38}
+\contentsline {chapter}{\numberline {5}Model Analysis}{41}
+\contentsline {paragraph}{Learned patterns}{41}
+\contentsline {paragraph}{Temporal information}{43}
+\contentsline {chapter}{\numberline {6}Related Works}{45}
+\contentsline {chapter}{\numberline {7}Conclusion}{47}
+\contentsline {chapter}{\numberline {A}Publications by Author}{49}

@@ -341,6 +341,16 @@ x = x - \alpha dx
 \end{equation}
 
 The learning rate is also considered as a function of the number of samples trained in the data. From experiments, the learning rate is updated after the model observes a number of training examples with two typical ways. The first way is to exponentially decrease the learning rate after some training samples with a~\textit{learning rate decay}, normally an epoch (training all samples in the training data). The second way is to reduce the learning rate based on a validation data. After each epoch, if the perplexity on the validation data is decreased, the learning rate is kept the same, otherwise it is multiplied by the learning rate decay.
+
+\paragraph{Methods to prevent overfitting} Overfitting is a phenomenon that the model has poor predictive performance, even if the model is well trained on the training data. The possibility of overfitting exists because the criterion used for training the model is different than the criterion used to measure the efficacy of the model. It is very likely that the training data yields a different distribution than the test data, therefore fitting the model on the training data does not guarantee a good prediction performance. 
+
+For neural network language models, the main methods used to prevent this phenomenon to happen is to apply~\textbf{regularisation methods} and~\textbf{early-stopping} strategy. 
+
+\begin{itemize}
+	\item Regularisation: The most efficient method is to apply~\textbf{Dropout technique}, which refers to dropping out units (in most case, hidden units) in neural networks~\cite{hinton2012dropout,srivastava2014dropout}. Concretely, we temporarily set the unit values to $0$ based on a random distribution (Bernoulli distribution, for example) during the training phase. In the testing phase, the unit is always present. Dropout is usually applied in the hidden layers of feed-forward neural networks. The choice of which unit to drop in the layer is random which is normally associated with a fixed probability $p$ independent for each unit. Depending on the network size and the amount of training data, the value of $p$ is chosen empirically.
+	
+	\item Early-stopping: In order to prevent overfitting, we use a validation set during training. The validation data is a separate set with the size similar to the test data. After each epoch (normally a whole scan over the training data), we measure the perplexity of the model on the validation data. If the perplexity does not decrease, the learning rate is reduced in the next epoch. The training process is halted when the learning rate reaches a threshold.
+\end{itemize}
  
 \subsection{Recurrent neural language models}
 
@@ -580,9 +590,12 @@ h_t = o_t * \text{Tanh}(C_t)
 \label{eq:lstm3}
 \end{equation}
 
-The implementation of LSTM can be efficient by computing all gates in one single matrix multiplication, then applying the activation functions on different parts of the output. In practice, one can experience different implementation variations of LSTMs and RNNs in terms of initialisation, bias usage or different gate implementations such as the Gated Recurrent Unit~\cite{cho2014learning}. The empirical research of~\cite{zaremba2015empirical} shows that there is not any substantial difference in terms of performance between different LSTM variations. 
+The implementation of LSTM can be efficient by computing all gates in one single matrix multiplication, then applying the activation functions on different parts of the output. In practice, one can experience different implementation variations of LSTMs and RNNs in terms of initialisation, bias usage or different gate implementations such as the Gated Recurrent Unit~\cite{cho2014learning}. The empirical research of~\cite{zaremba2015empirical} shows that there is not any substantial difference in terms of performance between different LSTM variations.
 
-\paragraph{Training LSTM}
+\paragraph{Multi-layer recurrent neural network} We can extend a recurrent neural network by stacking the recurrent layers on top of each other in one single time-step. Concretely, the hidden layer at level $i$ is the input of the hidden layer at level $i+1$. For the recurrent connection of the network, the hidden layer at level $i$ only depends on the the previous hidden layer of the same level $i$. 
+
+\paragraph{Regularisation in RNN} Similar to feed-forward networks, the recurrent networks are prone to overfitting. In order to tackle the problem, it is efficient to apply dropout before the input of each recurrent unit~\cite{zaremba2014recurrent,pham2014dropout}. 
+%\paragraph{Training LSTM}
 
 %Rewrite the Backpropagation through time from RNN
 
@@ -652,8 +665,7 @@ Given the explanation of convolution - which is the connectivity between the neu
 
 Two hyper-parameters that affect the number of free parameters are kernel size and depth, while the other two control the output size of the layer. 
 
-\subsection{Convolution neural networks for NLP}
-
+%\subsection{Convolution neural networks for NLP}
 
 
 

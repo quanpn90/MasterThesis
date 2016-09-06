@@ -73,121 +73,132 @@
 \@writefile{toc}{\contentsline {paragraph}{Hidden layers}{15}}
 \@writefile{toc}{\contentsline {paragraph}{Input Layer}{15}}
 \newlabel{eq:hidden1}{{2.15}{15}}
-\citation{schwenk2007continuous,le2011structured}
 \newlabel{eq:dhidden}{{2.16}{16}}
 \newlabel{eq:dactivation}{{2.17}{16}}
 \@writefile{toc}{\contentsline {paragraph}{Parameter Update}{16}}
 \newlabel{eq:sgd}{{2.18}{16}}
-\citation{elman1990finding}
+\citation{hinton2012dropout,srivastava2014dropout}
+\citation{schwenk2007continuous,le2011structured}
+\@writefile{toc}{\contentsline {paragraph}{Methods to prevent overfitting}{17}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Recurrent neural language models}{17}}
-\@writefile{toc}{\contentsline {paragraph}{Recurrent Neural Networks}{17}}
+\citation{elman1990finding}
+\@writefile{toc}{\contentsline {paragraph}{Recurrent Neural Networks}{18}}
 \citation{mikolov2010recurrent}
 \citation{elman1990finding}
 \citation{mikolov2010recurrent}
-\@writefile{toc}{\contentsline {paragraph}{Recurrent Language Models}{18}}
-\newlabel{eq:rnnhidden}{{2.20}{18}}
-\newlabel{eq:rnnoutput}{{2.21}{18}}
-\newlabel{tab:notationRec}{{2.2.4}{19}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Notations for recurrent neural network layers.}}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace  {}\cite  {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{20}}
-\newlabel{fig:SimpleRNN}{{2.2}{20}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.1}Training Recurrent Networks}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple RNNLM\nobreakspace  {}\cite  {mikolov2010recurrent} predicting the sequence ``The cat is eating fish bone''.}}{19}}
+\newlabel{fig:SimpleRNN}{{2.2}{19}}
+\@writefile{toc}{\contentsline {paragraph}{Recurrent Language Models}{19}}
+\newlabel{eq:rnnhidden}{{2.20}{19}}
+\newlabel{tab:notationRec}{{2.2.4}{20}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Notations for recurrent neural network layers.}}{20}}
+\newlabel{eq:rnnoutput}{{2.21}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.1}Training Recurrent Networks}{21}}
 \@writefile{toc}{\contentsline {paragraph}{At each time step}{21}}
-\newlabel{eq:drnn1}{{2.24}{21}}
-\newlabel{eq:drnn2}{{2.26}{21}}
+\newlabel{eq:drnn1}{{2.24}{22}}
+\newlabel{eq:drnn2}{{2.26}{22}}
+\newlabel{eq:drnn3}{{2.27}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Back-propagation through time}{23}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces BPTT algorithm for ``vanilla'' RNNs}}{23}}
+\newlabel{alg:bpttrnn}{{1}{23}}
 \citation{bengio1994learning,pascanu2013difficulty}
 \citation{mikolov2011extensions,hai2012measuring}
 \citation{pascanu2013difficulty}
-\newlabel{eq:drnn3}{{2.27}{22}}
-\@writefile{toc}{\contentsline {paragraph}{Back-propagation through time}{22}}
-\@writefile{toc}{\contentsline {paragraph}{Problems with BPTT}{22}}
 \citation{mikolov2014learning}
 \citation{le2015simple}
 \citation{martens2011learning}
 \citation{hochreiter1997long}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces BPTT algorithm for ``vanilla'' RNNs}}{23}}
-\newlabel{alg:bpttrnn}{{1}{23}}
-\@writefile{toc}{\contentsline {paragraph}{Dealing with gradient vanishing}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Problems with BPTT}{24}}
+\@writefile{toc}{\contentsline {paragraph}{Dealing with gradient vanishing}{24}}
 \citation{bengio2013advances}
 \citation{graves2005framewise}
 \citation{sutskever2014sequence}
 \citation{hochreiter1997long}
-\@writefile{toc}{\contentsline {paragraph}{LSTM Structure}{24}}
+\@writefile{toc}{\contentsline {paragraph}{LSTM Structure}{25}}
 \citation{cho2014learning}
 \citation{zaremba2015empirical}
-\newlabel{eq:lstm1}{{2.30}{25}}
-\newlabel{eq:lstm2}{{2.31}{25}}
-\newlabel{eq:lstm3}{{2.32}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Training LSTM}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{25}}
+\citation{zaremba2014recurrent,pham2014dropout}
+\newlabel{eq:lstm1}{{2.30}{26}}
+\newlabel{eq:lstm2}{{2.31}{26}}
+\newlabel{eq:lstm3}{{2.32}{26}}
+\@writefile{toc}{\contentsline {paragraph}{Multi-layer recurrent neural network}{26}}
+\@writefile{toc}{\contentsline {paragraph}{Regularisation in RNN}{26}}
 \citation{waibel1989phoneme}
 \citation{fukushima1980neocognitron,serre2007robust}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The convolutional layer}{26}}
-\@writefile{toc}{\contentsline {paragraph}{Forward propagation}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The convolutional layer}{27}}
 \citation{krizhevsky2012imagenet}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Simple illustration for convolution. The input is a 2D image, the output is obtained by sliding the kernel through the image.}}{27}}
-\newlabel{fig:conv_ops}{{2.3}{27}}
-\newlabel{eq:convolution}{{2.33}{27}}
-\@writefile{toc}{\contentsline {paragraph}{Backward propagation}{27}}
-\newlabel{eq:dconv}{{2.34}{28}}
-\newlabel{eq:dconv2}{{2.35}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Hyper parameters for Convolutional Neural Network}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Convolution neural networks for NLP}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Simple illustration for convolution. The input is a 2D image, the output is obtained by sliding the kernel through the image.}}{28}}
+\newlabel{fig:conv_ops}{{2.3}{28}}
+\@writefile{toc}{\contentsline {paragraph}{Forward propagation}{28}}
+\newlabel{eq:convolution}{{2.33}{28}}
+\@writefile{toc}{\contentsline {paragraph}{Backward propagation}{29}}
+\newlabel{eq:dconv}{{2.34}{29}}
+\newlabel{eq:dconv2}{{2.35}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Hyper parameters for Convolutional Neural Network}{29}}
+\citation{krizhevsky2012imagenet,kaiming2015resnet,szegedy2015going}
+\citation{graves2005framewise,abdel2012applying}
+\citation{hochreiter1997long}
+\citation{collobert2011natural}
+\citation{bengio2003neural}
+\citation{collobert2011natural}
 \citation{bengio2006neural}
 \citation{srivastava2015highway}
-\citation{hinton2012dropout}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{30}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Convolutional Neural Language Models}{31}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:cnn}{{3}{30}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Base FFLM}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{31}}
-\newlabel{fig:baseline}{{3.1}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}CNN and variants}{31}}
+\newlabel{c:cnn}{{3}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Base FFLM}{32}}
+\@writefile{toc}{\contentsline {paragraph}{Highway layer}{32}}
+\citation{hinton2012dropout}
+\citation{hinton2012dropout}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of baseline FFLM.}}{33}}
+\newlabel{fig:baseline}{{3.1}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}CNN and variants}{33}}
 \citation{DBLP:journals/corr/IoffeS15}
 \citation{lin2013network}
 \citation{Kalchbrenner2014conv}
 \citation{kim2014sentence}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{33}}
-\newlabel{fig:simpleconv}{{3.2}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{33}}
-\newlabel{fig:combine}{{3.3}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Convolutional layer on top of the context matrix.}}{35}}
+\newlabel{fig:simpleconv}{{3.2}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Combining kernels with different sizes. We concatenate the outputs of 2 convolutional blocks with kernel size of $5$ and $3$ respectively.}}{36}}
+\newlabel{fig:combine}{{3.3}{36}}
 \citation{mikolov2014learning}
 \citation{bojar-EtAl:2015:WMT}
 \citation{koehn2007moses}
 \citation{le2011structured,sukhbaatar2015end,devlin2014fast}
 \citation{tieleman2012lecture}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiments}{34}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiments}{37}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:exp}{{4}{34}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Experiment details}{34}}
+\newlabel{c:exp}{{4}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Experiment details}{37}}
 \citation{zaremba2014recurrent}
 \citation{mikolov2014learning}
 \citation{mikolov2014learning}
 \citation{zaremba2014recurrent}
 \citation{Kalchbrenner2014conv}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Results}{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Results}{38}}
 \citation{zaremba2014recurrent}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Results on Penn Treebank and Europarl-NC. Figure of merit is perplexity (lower is better). Legend: $k$: embedding size; \textit  {ker}: kernel size; \textit  {val}: results on validation data; \textit  {test}: results on test data; \textit  {\#p}: number of parameters; \textit  {hid}: size of hidden layers; \textit  {\#l}: number of layers.}}{37}}
-\newlabel{tab:result}{{4.1}{37}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Results on Penn Treebank and Europarl-NC. Figure of merit is perplexity (lower is better). Legend: $k$: embedding size; \textit  {ker}: kernel size; \textit  {val}: results on validation data; \textit  {test}: results on test data; \textit  {\#p}: number of parameters; \textit  {hid}: size of hidden layers; \textit  {\#l}: number of layers.}}{40}}
+\newlabel{tab:result}{{4.1}{40}}
 \citation{krizhevsky2012imagenet}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{38}}
-\newlabel{fig:kernels}{{5.1}{38}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Model Analysis}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Some example phrases that have highest activations for 8 example kernels (each box), extracted from the validation set of the Penn Treebank. Model trained with 256 kernels for 256-dimension word vectors.}}{41}}
+\newlabel{fig:kernels}{{5.1}{41}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Model Analysis}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:analysis}{{5}{38}}
-\@writefile{toc}{\contentsline {paragraph}{Learned patterns}{38}}
+\newlabel{c:analysis}{{5}{41}}
+\@writefile{toc}{\contentsline {paragraph}{Learned patterns}{41}}
 \citation{hai2012measuring}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{39}}
-\newlabel{fig:weight-dist}{{5.2}{39}}
-\@writefile{toc}{\contentsline {paragraph}{Temporal information}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{41}}
-\newlabel{fig:position}{{5.3}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The distribution of positive weights over context positions, where 1 is the position closest to the predicted word.}}{42}}
+\newlabel{fig:weight-dist}{{5.2}{42}}
+\@writefile{toc}{\contentsline {paragraph}{Temporal information}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Perplexity change over position, by incrementally revealing the Mapping's weights corresponding to each position.}}{44}}
+\newlabel{fig:position}{{5.3}{44}}
 \citation{lecun1995convolutional}
 \citation{karen2014vgg,kaiming2015resnet}
 \citation{kim2014sentence}
@@ -196,79 +207,83 @@
 \citation{nguyen2015relation}
 \citation{shen2014latent}
 \citation{collobert2011natural}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Related Works}{42}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Related Works}{45}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:related}{{6}{42}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{44}}
+\newlabel{c:related}{{6}{45}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{47}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{c:conc}{{7}{44}}
+\newlabel{c:conc}{{7}{47}}
 \bibstyle{plainnat}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Publications by Author}{46}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Publications by Author}{49}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\bibcite{bengio1994learning}{{1}{1994}{{Bengio et~al.}}{{Bengio, Simard, and Frasconi}}}
-\bibcite{bengio2003neural}{{2}{2003}{{Bengio et~al.}}{{Bengio, Ducharme, Vincent, and Jauvin}}}
-\bibcite{bengio2006neural}{{3}{2006}{{Bengio et~al.}}{{Bengio, Schwenk, Sen{\'e}cal, Morin, and Gauvain}}}
-\bibcite{bengio2013advances}{{4}{2013}{{Bengio et~al.}}{{Bengio, Boulanger-Lewandowski, and Pascanu}}}
-\bibcite{bojar-EtAl:2015:WMT}{{5}{2015}{{Bojar et~al.}}{{Bojar, Chatterjee, Federmann, Haddow, Huck, Hokamp, Koehn, Logacheva, Monz, Negri, Post, Scarton, Specia, and Turchi}}}
-\bibcite{brown1992class}{{6}{1992}{{Brown et~al.}}{{Brown, Desouza, Mercer, Pietra, and Lai}}}
-\bibcite{chelba2000structured}{{7}{2000}{{Chelba and Jelinek}}{{}}}
-\bibcite{chen1999empirical}{{8}{1999}{{Chen and Goodman}}{{}}}
-\bibcite{cho2014learning}{{9}{2014}{{Cho et~al.}}{{Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau, Bougares, Schwenk, and Bengio}}}
-\bibcite{collobert2011natural}{{10}{2011}{{Collobert et~al.}}{{Collobert, Weston, Bottou, Karlen, Kavukcuoglu, and Kuksa}}}
-\bibcite{devlin2014fast}{{11}{2014}{{Devlin et~al.}}{{Devlin, Zbib, Huang, Lamar, Schwartz, and Makhoul}}}
-\bibcite{elman1990finding}{{12}{1990}{{Elman}}{{}}}
-\bibcite{federico2008irstlm}{{13}{2008}{{Federico et~al.}}{{Federico, Bertoldi, and Cettolo}}}
-\bibcite{filimonov2009joint}{{14}{2009}{{Filimonov and Harper}}{{}}}
-\bibcite{fukushima1980neocognitron}{{15}{1980}{{Fukushima}}{{}}}
-\bibcite{graves2005framewise}{{16}{2005}{{Graves and Schmidhuber}}{{}}}
-\bibcite{Gu:etal:2015}{{17}{2015}{{Gu et~al.}}{{Gu, Wang, Kuen, Ma, Shahroudy, Shuai, Liu, Wang, and Wang}}}
-\bibcite{le2011structured}{{18}{2011}{{Hai~Son et~al.}}{{Hai~Son, Oparin, Allauzen, Gauvain, and Yvon}}}
-\bibcite{hai2012measuring}{{19}{2012}{{Hai~Son et~al.}}{{Hai~Son, Allauzen, and Yvon}}}
-\bibcite{kaiming2015resnet}{{20}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
-\bibcite{heafield2011kenlm}{{21}{2011}{{Heafield}}{{}}}
-\bibcite{hinton2012dropout}{{22}{2012}{{Hinton et~al.}}{{Hinton, Srivastava, Krizhevsky, Sutskever, and Salakhutdinov}}}
-\bibcite{hochreiter1997long}{{23}{1997}{{Hochreiter and Schmidhuber}}{{}}}
-\bibcite{hu2014convolutional}{{24}{2014}{{Hu et~al.}}{{Hu, Lu, Li, and Chen}}}
-\bibcite{DBLP:journals/corr/IoffeS15}{{25}{2015}{{Ioffe and Szegedy}}{{}}}
-\bibcite{Kalchbrenner2014conv}{{26}{2014}{{Kalchbrenner et~al.}}{{Kalchbrenner, Grefenstette, and Blunsom}}}
-\bibcite{kim2014sentence}{{27}{2014}{{Kim}}{{}}}
-\bibcite{kingsley1932selective}{{28}{1932}{{Kingsley}}{{}}}
-\bibcite{kneser1995improved}{{29}{1995}{{Kneser and Ney}}{{}}}
-\bibcite{koehn2007moses}{{30}{2007}{{Koehn et~al.}}{{Koehn, Hoang, Birch, Callison-Burch, Federico, Bertoldi, Cowan, Shen, Moran, Zens, et~al.}}}
-\bibcite{krizhevsky2012imagenet}{{31}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
-\bibcite{le2015simple}{{32}{2015}{{Le et~al.}}{{Le, Jaitly, and Hinton}}}
-\bibcite{le1990handwritten}{{33}{1990}{{Le~Cun et~al.}}{{Le~Cun, Denker, Henderson, Howard, Hubbard, and Jackel}}}
-\bibcite{lecun1995convolutional}{{34}{1995}{{LeCun and Bengio}}{{}}}
-\bibcite{lin2013network}{{35}{2013}{{Lin et~al.}}{{Lin, Chen, and Yan}}}
-\bibcite{martens2011learning}{{36}{2011}{{Martens and Sutskever}}{{}}}
-\bibcite{mikolov2010recurrent}{{37}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
-\bibcite{mikolov2011extensions}{{38}{2011}{{Mikolov et~al.}}{{Mikolov, Kombrink, Burget, {\v {C}}ernock{\`y}, and Khudanpur}}}
-\bibcite{mikolov2014learning}{{39}{2014}{{Mikolov et~al.}}{{Mikolov, Joulin, Chopra, Mathieu, and Ranzato}}}
-\bibcite{ney1994structuring}{{40}{1994}{{Ney et~al.}}{{Ney, Essen, and Kneser}}}
-\bibcite{nguyen2015relation}{{41}{2015}{{Nguyen and Grishman}}{{}}}
-\bibcite{niesler1996variable}{{42}{1996}{{Niesler and Woodland}}{{}}}
-\bibcite{pascanu2013difficulty}{{43}{2013}{{Pascanu et~al.}}{{Pascanu, Mikolov, and Bengio}}}
-\bibcite{Rosenfeld:2000}{{44}{2000}{{Rosenfeld}}{{}}}
-\bibcite{rumelhart1985learning}{{45}{1985}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
-\bibcite{sag2002multiword}{{46}{2002}{{Sag et~al.}}{{Sag, Baldwin, Bond, Copestake, and Flickinger}}}
-\bibcite{schwenk2007continuous}{{47}{2007}{{Schwenk}}{{}}}
-\bibcite{serre2007robust}{{48}{2007}{{Serre et~al.}}{{Serre, Wolf, Bileschi, Riesenhuber, and Poggio}}}
-\bibcite{shen2014latent}{{49}{2014}{{Shen et~al.}}{{Shen, He, Gao, Deng, and Mesnil}}}
-\bibcite{karen2014vgg}{{50}{2014}{{Simonyan and Zisserman}}{{}}}
-\bibcite{srivastava2015highway}{{51}{2015}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
-\bibcite{sukhbaatar2015end}{{52}{2015}{{Sukhbaatar et~al.}}{{Sukhbaatar, Weston, Fergus, et~al.}}}
-\bibcite{sutskever2014sequence}{{53}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
-\bibcite{tieleman2012lecture}{{54}{2012}{{Tieleman and Hinton}}{{}}}
-\bibcite{vaswani2013decoding}{{55}{2013}{{Vaswani et~al.}}{{Vaswani, Zhao, Fossum, and Chiang}}}
-\bibcite{waibel1989phoneme}{{56}{1989}{{Waibel et~al.}}{{Waibel, Hanazawa, Hinton, Shikano, and Lang}}}
-\bibcite{witten1991zero}{{57}{1991}{{Witten and Bell}}{{}}}
-\bibcite{zaremba2015empirical}{{58}{2015}{{Zaremba}}{{}}}
-\bibcite{zaremba2014recurrent}{{59}{2014}{{Zaremba et~al.}}{{Zaremba, Sutskever, and Vinyals}}}
-\bibcite{zeiler2012adadelta}{{60}{2012}{{Zeiler}}{{}}}
+\bibcite{abdel2012applying}{{1}{2012}{{Abdel-Hamid et~al.}}{{Abdel-Hamid, Mohamed, Jiang, and Penn}}}
+\bibcite{bengio1994learning}{{2}{1994}{{Bengio et~al.}}{{Bengio, Simard, and Frasconi}}}
+\bibcite{bengio2003neural}{{3}{2003}{{Bengio et~al.}}{{Bengio, Ducharme, Vincent, and Jauvin}}}
+\bibcite{bengio2006neural}{{4}{2006}{{Bengio et~al.}}{{Bengio, Schwenk, Sen{\'e}cal, Morin, and Gauvain}}}
+\bibcite{bengio2013advances}{{5}{2013}{{Bengio et~al.}}{{Bengio, Boulanger-Lewandowski, and Pascanu}}}
+\bibcite{bojar-EtAl:2015:WMT}{{6}{2015}{{Bojar et~al.}}{{Bojar, Chatterjee, Federmann, Haddow, Huck, Hokamp, Koehn, Logacheva, Monz, Negri, Post, Scarton, Specia, and Turchi}}}
+\bibcite{brown1992class}{{7}{1992}{{Brown et~al.}}{{Brown, Desouza, Mercer, Pietra, and Lai}}}
+\bibcite{chelba2000structured}{{8}{2000}{{Chelba and Jelinek}}{{}}}
+\bibcite{chen1999empirical}{{9}{1999}{{Chen and Goodman}}{{}}}
+\bibcite{cho2014learning}{{10}{2014}{{Cho et~al.}}{{Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau, Bougares, Schwenk, and Bengio}}}
+\bibcite{collobert2011natural}{{11}{2011}{{Collobert et~al.}}{{Collobert, Weston, Bottou, Karlen, Kavukcuoglu, and Kuksa}}}
+\bibcite{devlin2014fast}{{12}{2014}{{Devlin et~al.}}{{Devlin, Zbib, Huang, Lamar, Schwartz, and Makhoul}}}
+\bibcite{elman1990finding}{{13}{1990}{{Elman}}{{}}}
+\bibcite{federico2008irstlm}{{14}{2008}{{Federico et~al.}}{{Federico, Bertoldi, and Cettolo}}}
+\bibcite{filimonov2009joint}{{15}{2009}{{Filimonov and Harper}}{{}}}
+\bibcite{fukushima1980neocognitron}{{16}{1980}{{Fukushima}}{{}}}
+\bibcite{graves2005framewise}{{17}{2005}{{Graves and Schmidhuber}}{{}}}
+\bibcite{Gu:etal:2015}{{18}{2015}{{Gu et~al.}}{{Gu, Wang, Kuen, Ma, Shahroudy, Shuai, Liu, Wang, and Wang}}}
+\bibcite{le2011structured}{{19}{2011}{{Hai~Son et~al.}}{{Hai~Son, Oparin, Allauzen, Gauvain, and Yvon}}}
+\bibcite{hai2012measuring}{{20}{2012}{{Hai~Son et~al.}}{{Hai~Son, Allauzen, and Yvon}}}
+\bibcite{kaiming2015resnet}{{21}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
+\bibcite{heafield2011kenlm}{{22}{2011}{{Heafield}}{{}}}
+\bibcite{hinton2012dropout}{{23}{2012}{{Hinton et~al.}}{{Hinton, Srivastava, Krizhevsky, Sutskever, and Salakhutdinov}}}
+\bibcite{hochreiter1997long}{{24}{1997}{{Hochreiter and Schmidhuber}}{{}}}
+\bibcite{hu2014convolutional}{{25}{2014}{{Hu et~al.}}{{Hu, Lu, Li, and Chen}}}
+\bibcite{DBLP:journals/corr/IoffeS15}{{26}{2015}{{Ioffe and Szegedy}}{{}}}
+\bibcite{Kalchbrenner2014conv}{{27}{2014}{{Kalchbrenner et~al.}}{{Kalchbrenner, Grefenstette, and Blunsom}}}
+\bibcite{kim2014sentence}{{28}{2014}{{Kim}}{{}}}
+\bibcite{kingsley1932selective}{{29}{1932}{{Kingsley}}{{}}}
+\bibcite{kneser1995improved}{{30}{1995}{{Kneser and Ney}}{{}}}
+\bibcite{koehn2007moses}{{31}{2007}{{Koehn et~al.}}{{Koehn, Hoang, Birch, Callison-Burch, Federico, Bertoldi, Cowan, Shen, Moran, Zens, et~al.}}}
+\bibcite{krizhevsky2012imagenet}{{32}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
+\bibcite{le2015simple}{{33}{2015}{{Le et~al.}}{{Le, Jaitly, and Hinton}}}
+\bibcite{le1990handwritten}{{34}{1990}{{Le~Cun et~al.}}{{Le~Cun, Denker, Henderson, Howard, Hubbard, and Jackel}}}
+\bibcite{lecun1995convolutional}{{35}{1995}{{LeCun and Bengio}}{{}}}
+\bibcite{lin2013network}{{36}{2013}{{Lin et~al.}}{{Lin, Chen, and Yan}}}
+\bibcite{martens2011learning}{{37}{2011}{{Martens and Sutskever}}{{}}}
+\bibcite{mikolov2010recurrent}{{38}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
+\bibcite{mikolov2011extensions}{{39}{2011}{{Mikolov et~al.}}{{Mikolov, Kombrink, Burget, {\v {C}}ernock{\`y}, and Khudanpur}}}
+\bibcite{mikolov2014learning}{{40}{2014}{{Mikolov et~al.}}{{Mikolov, Joulin, Chopra, Mathieu, and Ranzato}}}
+\bibcite{ney1994structuring}{{41}{1994}{{Ney et~al.}}{{Ney, Essen, and Kneser}}}
+\bibcite{nguyen2015relation}{{42}{2015}{{Nguyen and Grishman}}{{}}}
+\bibcite{niesler1996variable}{{43}{1996}{{Niesler and Woodland}}{{}}}
+\bibcite{pascanu2013difficulty}{{44}{2013}{{Pascanu et~al.}}{{Pascanu, Mikolov, and Bengio}}}
+\bibcite{pham2014dropout}{{45}{2014}{{Pham et~al.}}{{Pham, Bluche, Kermorvant, and Louradour}}}
+\bibcite{Rosenfeld:2000}{{46}{2000}{{Rosenfeld}}{{}}}
+\bibcite{rumelhart1985learning}{{47}{1985}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{sag2002multiword}{{48}{2002}{{Sag et~al.}}{{Sag, Baldwin, Bond, Copestake, and Flickinger}}}
+\bibcite{schwenk2007continuous}{{49}{2007}{{Schwenk}}{{}}}
+\bibcite{serre2007robust}{{50}{2007}{{Serre et~al.}}{{Serre, Wolf, Bileschi, Riesenhuber, and Poggio}}}
+\bibcite{shen2014latent}{{51}{2014}{{Shen et~al.}}{{Shen, He, Gao, Deng, and Mesnil}}}
+\bibcite{karen2014vgg}{{52}{2014}{{Simonyan and Zisserman}}{{}}}
+\bibcite{srivastava2014dropout}{{53}{2014}{{Srivastava et~al.}}{{Srivastava, Hinton, Krizhevsky, Sutskever, and Salakhutdinov}}}
+\bibcite{srivastava2015highway}{{54}{2015}{{Srivastava et~al.}}{{Srivastava, Greff, and Schmidhuber}}}
+\bibcite{sukhbaatar2015end}{{55}{2015}{{Sukhbaatar et~al.}}{{Sukhbaatar, Weston, Fergus, et~al.}}}
+\bibcite{sutskever2014sequence}{{56}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
+\bibcite{szegedy2015going}{{57}{2015}{{Szegedy et~al.}}{{Szegedy, Liu, Jia, Sermanet, Reed, Anguelov, Erhan, Vanhoucke, and Rabinovich}}}
+\bibcite{tieleman2012lecture}{{58}{2012}{{Tieleman and Hinton}}{{}}}
+\bibcite{vaswani2013decoding}{{59}{2013}{{Vaswani et~al.}}{{Vaswani, Zhao, Fossum, and Chiang}}}
+\bibcite{waibel1989phoneme}{{60}{1989}{{Waibel et~al.}}{{Waibel, Hanazawa, Hinton, Shikano, and Lang}}}
+\bibcite{witten1991zero}{{61}{1991}{{Witten and Bell}}{{}}}
+\bibcite{zaremba2015empirical}{{62}{2015}{{Zaremba}}{{}}}
+\bibcite{zaremba2014recurrent}{{63}{2014}{{Zaremba et~al.}}{{Zaremba, Sutskever, and Vinyals}}}
+\bibcite{zeiler2012adadelta}{{64}{2012}{{Zeiler}}{{}}}
